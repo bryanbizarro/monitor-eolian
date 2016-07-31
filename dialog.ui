@@ -1,0 +1,4149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1322</width>
+    <height>660</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: rgb(187, 222, 251);</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1321</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;
+border-image: url(:/eolian_title_large_blue.png);
+
+background: none;
+border: none;
+background-repeat: none;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>311</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(26, 60, 101);
+border: none;
+background-repeat: none;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="centralWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>291</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(26, 60, 101);
+border: none;
+background-repeat: none;</string>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>291</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
+   </widget>
+  </widget>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>440</y>
+     <width>311</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: none;
+background-repeat: none;
+background-color: rgb(255, 255, 255);
+
+</string>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>294</width>
+      <height>245</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+       </property>
+       <property name="text">
+        <string>Amperaje</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+       </property>
+       <property name="text">
+        <string>MPPT</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLCDNumber" name="lcd_voltaje2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: ;
+
+color: rgb(255, 0, 0);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QLCDNumber" name="lcd_velocidad">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: none;
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0" colspan="2">
+      <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+       </property>
+       <property name="text">
+        <string>GAP</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+       </property>
+       <property name="text">
+        <string>Torque</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+       </property>
+       <property name="text">
+        <string>Voltajes</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QLCDNumber" name="lcd_max_voltaje">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: none;
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="2">
+      <widget class="QLCDNumber" name="lcd_gap">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: none;
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_20">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+       </property>
+       <property name="text">
+        <string>Máx Voltaje</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="2">
+      <widget class="QLCDNumber" name="lcd_min_voltaje">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: none;
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QLCDNumber" name="lcd_amperaje2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: ;
+
+color: rgb(255, 0, 0);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_21">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+       </property>
+       <property name="text">
+        <string>Mín Voltaje</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QLCDNumber" name="lcd_torque">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: none;
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="2">
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+       </property>
+       <property name="text">
+        <string>Velocidad</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QLabel" name="label_8">
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+       </property>
+       <property name="text">
+        <string>MPPT2(Rojo)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLCDNumber" name="lcd_amperaje1">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: ;
+color: rgb(85, 0, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLabel" name="label_7">
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+       </property>
+       <property name="text">
+        <string>MPPT1 (Azul)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLCDNumber" name="lcd_voltaje1">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: ;
+color: rgb(85, 0, 255);</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+    <zorder>label_6</zorder>
+    <zorder>lcd_voltaje2</zorder>
+    <zorder>lcd_amperaje2</zorder>
+    <zorder>label_7</zorder>
+    <zorder>label_5</zorder>
+    <zorder>label_8</zorder>
+    <zorder>label_4</zorder>
+    <zorder>label_3</zorder>
+    <zorder>label_2</zorder>
+    <zorder>lcd_voltaje1</zorder>
+    <zorder>lcd_gap</zorder>
+    <zorder>lcd_torque</zorder>
+    <zorder>lcd_velocidad</zorder>
+    <zorder>label_20</zorder>
+    <zorder>label_21</zorder>
+    <zorder>lcd_max_voltaje</zorder>
+    <zorder>lcd_min_voltaje</zorder>
+    <zorder>lcd_amperaje1</zorder>
+    <zorder>label_9</zorder>
+   </widget>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>326</x>
+     <y>80</y>
+     <width>991</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>MPPT</string>
+    </attribute>
+    <widget class="QCustomPlot" name="Plot2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>320</y>
+       <width>951</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(223, 223, 223);
+border: none;
+background-repeat: none;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>280</y>
+       <width>971</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(223, 223, 223);
+border: none;
+background-repeat: none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>290</y>
+       <width>161</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(223, 223, 223);
+border: none;
+background-repeat: none;</string>
+     </property>
+     <property name="text">
+      <string>Gráfico Voltaje</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>191</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(223, 223, 223);
+border: none;
+background-repeat: none;</string>
+     </property>
+     <property name="text">
+      <string>Gráfico Amperaje</string>
+     </property>
+    </widget>
+    <widget class="QCustomPlot" name="Plot1" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>951</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(223, 223, 223);
+border: none;
+background-repeat: none;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>971</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(223, 223, 223);
+border: none;
+background-repeat: none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>pushButton_5</zorder>
+    <zorder>pushButton_4</zorder>
+    <zorder>Plot2</zorder>
+    <zorder>label_11</zorder>
+    <zorder>label_10</zorder>
+    <zorder>Plot1</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Motor</string>
+    </attribute>
+    <widget class="QCustomPlot" name="Plot4" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>320</y>
+       <width>951</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(223, 223, 223);
+border: none;
+background-repeat: none;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>280</y>
+       <width>971</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(223, 223, 223);
+border: none;
+background-repeat: none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(223, 223, 223);
+border: none;
+background-repeat: none;</string>
+     </property>
+     <property name="text">
+      <string>Velocidad</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>971</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(223, 223, 223);
+border: none;
+background-repeat: none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>290</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(223, 223, 223);
+border: none;
+background-repeat: none;</string>
+     </property>
+     <property name="text">
+      <string>Torque</string>
+     </property>
+    </widget>
+    <widget class="QCustomPlot" name="Plot3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>951</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(223, 223, 223);
+border: none;
+background-repeat: none;</string>
+     </property>
+    </widget>
+    <zorder>pushButton_7</zorder>
+    <zorder>pushButton_6</zorder>
+    <zorder>Plot4</zorder>
+    <zorder>label_12</zorder>
+    <zorder>label_13</zorder>
+    <zorder>Plot3</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>BMS</string>
+    </attribute>
+    <widget class="QLabel" name="label_52">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>520</y>
+       <width>951</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>7</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>CCL: Charge Current Limit | DCL: Discharge Current Limit | P. (Pack) | H. (High) | L. (Low) | Av. (Average) | Rst. (Resistance) | Ocell (Opencell) | Th. (Therm) | V. (Volt)</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="gridWidget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>350</y>
+       <width>951</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="spacing">
+       <number>2</number>
+      </property>
+      <item row="0" column="4">
+       <widget class="QLabel" name="label_25">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Relay State</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="9">
+       <widget class="QLCDNumber" name="lcdNumber_12"/>
+      </item>
+      <item row="0" column="10">
+       <widget class="QLabel" name="label_40">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>H. Cell Rst.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="6">
+       <widget class="QLabel" name="label_34">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>H. Cell V ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLCDNumber" name="lcdNumber_4">
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="8">
+       <widget class="QLabel" name="label_38">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>L. OCell Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="11">
+       <widget class="QLCDNumber" name="lcdNumber_13"/>
+      </item>
+      <item row="4" column="6">
+       <widget class="QLabel" name="label_35">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>L. Cell V ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLCDNumber" name="lcd_highTemp"/>
+      </item>
+      <item row="2" column="8">
+       <widget class="QLabel" name="label_39">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Av. OCell Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="12">
+       <widget class="QLabel" name="label_50">
+        <property name="text">
+         <string>CCL</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="12">
+       <widget class="QLabel" name="label_51">
+        <property name="text">
+         <string>DCL</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="12">
+       <widget class="QLabel" name="label_44">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Max Cell V</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLCDNumber" name="lcd_relayState"/>
+      </item>
+      <item row="4" column="10">
+       <widget class="QLabel" name="label_49">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>L. Intres ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="10">
+       <widget class="QLabel" name="label_43">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Av. Cell Rst.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="12">
+       <widget class="QLabel" name="label_45">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Min Cell V</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLabel" name="label_31">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>H. Cell Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="10">
+       <widget class="QLabel" name="label_48">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>H. Intres ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QLabel" name="label_28">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Int Temp</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_22">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>L. Temp</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLCDNumber" name="lcd_openVolt">
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLCDNumber" name="lcd_packVolt">
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="8">
+       <widget class="QLabel" name="label_46">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>H. OCell ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLabel" name="label_30">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>L. Th. ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="label_29">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>H. Th. ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_27">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Av. Temp</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="6">
+       <widget class="QLabel" name="label_36">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Av. Cell Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QLabel" name="label_33">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Pack cycles</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QLabel" name="label_32">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>L. Cell Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QLabel" name="label_14">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Pack SoC</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_15">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>P. Current</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_16">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);
+</string>
+        </property>
+        <property name="text">
+         <string>P. Inst. Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLCDNumber" name="lcd_packAmp">
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_19">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>P. Sum Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_23">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Max P. Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_17">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>P. Open Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_24">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>Min P. Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QLCDNumber" name="lcdNumber_11"/>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLCDNumber" name="lcd_AvgTemp"/>
+      </item>
+      <item row="3" column="5">
+       <widget class="QLCDNumber" name="lcd_packAmphours"/>
+      </item>
+      <item row="5" column="3">
+       <widget class="QLCDNumber" name="lcdNumber_19"/>
+      </item>
+      <item row="2" column="7">
+       <widget class="QLCDNumber" name="lcdNumber_23"/>
+      </item>
+      <item row="3" column="7">
+       <widget class="QLCDNumber" name="lcdNumber_24"/>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLCDNumber" name="lcd_lowTermID"/>
+      </item>
+      <item row="4" column="5">
+       <widget class="QLCDNumber" name="lcd_packResistance"/>
+      </item>
+      <item row="1" column="9">
+       <widget class="QLCDNumber" name="lcdNumber_26"/>
+      </item>
+      <item row="2" column="9">
+       <widget class="QLCDNumber" name="lcdNumber_27"/>
+      </item>
+      <item row="4" column="7">
+       <widget class="QLCDNumber" name="lcdNumber_25"/>
+      </item>
+      <item row="1" column="7">
+       <widget class="QLCDNumber" name="lcdNumber_22"/>
+      </item>
+      <item row="2" column="5">
+       <widget class="QLCDNumber" name="lcdNumber_8"/>
+      </item>
+      <item row="3" column="11">
+       <widget class="QLCDNumber" name="lcdNumber_32"/>
+      </item>
+      <item row="3" column="13">
+       <widget class="QLCDNumber" name="lcd_DCL"/>
+      </item>
+      <item row="2" column="13">
+       <widget class="QLCDNumber" name="lcd_CCL"/>
+      </item>
+      <item row="1" column="11">
+       <widget class="QLCDNumber" name="lcdNumber_30"/>
+      </item>
+      <item row="2" column="11">
+       <widget class="QLCDNumber" name="lcdNumber_31"/>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLCDNumber" name="lcd_maxPackVolt">
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="11">
+       <widget class="QLCDNumber" name="lcdNumber_33"/>
+      </item>
+      <item row="0" column="8">
+       <widget class="QLabel" name="label_37">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>H. OCell Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="13">
+       <widget class="QLCDNumber" name="lcdNumber_34"/>
+      </item>
+      <item row="4" column="9">
+       <widget class="QLCDNumber" name="lcdNumber_29"/>
+      </item>
+      <item row="3" column="9">
+       <widget class="QLCDNumber" name="lcdNumber_28"/>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLCDNumber" name="lcd_minPackVolt">
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="8">
+       <widget class="QLabel" name="label_47">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>L. OCell ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLCDNumber" name="lcd_lowTemp"/>
+      </item>
+      <item row="1" column="10">
+       <widget class="QLabel" name="label_42">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>L. Cell Rst.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="5">
+       <widget class="QLCDNumber" name="lcd_packSOC"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_26">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>H. Temp</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="13">
+       <widget class="QLCDNumber" name="lcdNumber_14"/>
+      </item>
+      <item row="4" column="4">
+       <widget class="QLabel" name="label_41">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>P. Rst.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="4">
+       <widget class="QLabel" name="label_18">
+        <property name="font">
+         <font>
+          <family>Arial</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>P. AmpHrs</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLCDNumber" name="lcd_maxTermID"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QCustomPlot" name="BMS_volt_plot" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>951</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;
+background-repeat: none;
+background-color:rgb(232, 232, 232);
+
+</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_53">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>15</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;
+background-repeat: none;
+background-color:rgb(232, 232, 232);
+
+</string>
+     </property>
+     <property name="text">
+      <string>Voltaje</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_54">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial Black</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;
+background-repeat: none;
+background-color:rgb(232, 232, 232);
+
+</string>
+     </property>
+     <property name="text">
+      <string>Amperaje</string>
+     </property>
+    </widget>
+    <widget class="QCustomPlot" name="BMS_amp_plot" native="true">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
+       <width>951</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;
+background-repeat: none;
+background-color:rgb(232, 232, 232);
+
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>340</y>
+       <width>971</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(26, 60, 101);
+border: none;
+background-repeat: none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>971</width>
+       <height>321</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: none;
+background-repeat: none;
+background-color:rgb(232, 232, 232);
+
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <zorder>pushButton_9</zorder>
+    <zorder>pushButton_8</zorder>
+    <zorder>label_52</zorder>
+    <zorder>gridWidget</zorder>
+    <zorder>BMS_volt_plot</zorder>
+    <zorder>label_53</zorder>
+    <zorder>label_54</zorder>
+    <zorder>BMS_amp_plot</zorder>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>BMS Temperaturas</string>
+    </attribute>
+    <widget class="QProgressBar" name="temp_bar_15">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>130</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_5">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_3">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>10</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_16">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_22">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>80</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_17">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>160</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_12">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>100</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_26">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>250</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_18">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>160</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_30">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>280</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_19">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_20">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>190</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_11">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>100</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_9">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>70</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_6">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>40</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_27">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>250</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_8">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>70</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_24">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>220</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_21">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>190</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_28">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>280</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_29">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>280</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_14">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>130</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_25">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_23">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>220</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="temp_bar_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>BMS Amperaje</string>
+    </attribute>
+    <widget class="QProgressBar" name="amp_bar_26">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>250</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_11">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>100</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_17">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>160</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_9">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>70</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_27">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>250</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_21">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>190</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_22">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_6">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>40</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_15">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>130</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_5">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_24">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>220</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_12">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>100</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_29">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>280</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_18">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>160</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_25">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_16">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_23">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>220</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_3">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>10</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_20">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>190</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_28">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>280</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_19">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_30">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>280</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_14">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>130</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="amp_bar_8">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>70</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_6">
+    <attribute name="title">
+     <string>BMS Voltaje</string>
+    </attribute>
+    <widget class="QProgressBar" name="volt_bar_29">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>280</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_18">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>160</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_23">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>220</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_6">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>40</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_28">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>280</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_21">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>190</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_3">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>10</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_27">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>250</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_17">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>160</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_14">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>130</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_15">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>130</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_24">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>220</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_8">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>70</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_25">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_9">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>70</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_5">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_2">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>10</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_11">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>100</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_20">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>190</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_30">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>280</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_10">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_16">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_19">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>190</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_26">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>250</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_22">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="volt_bar_12">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>100</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt;}</string>
+     </property>
+     <property name="value">
+      <number>77</number>
+     </property>
+     <property name="format">
+      <string>%p</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QProgressBar" name="SoC_bar">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>350</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #f0ff00,stop: 0.4999 #ffb400,stop: 0.5 #ffb400,stop: 1 #ff8100 );border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;}QProgressBar{border: 0px; background: transparent; padding: 1px; text-align: center;border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px;font: 75 10pt; border-color: rgb(255, 255, 255);}
+</string>
+   </property>
+   <property name="value">
+    <number>77</number>
+   </property>
+   <property name="format">
+    <string>%p%</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>350</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(232, 232, 232);
+border: none;
+background-repeat: none;
+border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-radius: 7px ;border-bottom-left-radius: 7px; border: 0px solid black;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>400</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(232, 232, 232);
+background: transparent;
+</string>
+   </property>
+   <property name="text">
+    <string>Máx Velocidad</string>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="lcd_max_speed">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>400</y>
+     <width>64</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(232, 232, 232);
+background: transparent;
+</string>
+   </property>
+  </widget>
+  <zorder>pushButton_2</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>SoC_bar</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>centralWidget</zorder>
+  <zorder>scrollArea</zorder>
+  <zorder>tabWidget</zorder>
+  <zorder>label</zorder>
+  <zorder>lcd_max_speed</zorder>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header location="global">../../qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
