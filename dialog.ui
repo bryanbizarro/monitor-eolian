@@ -53,7 +53,7 @@ border-radius: 5px;
 }</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab">
     <attribute name="title">
@@ -187,7 +187,7 @@ background-repeat: none;</string>
       <rect>
        <x>20</x>
        <y>320</y>
-       <width>951</width>
+       <width>780</width>
        <height>211</height>
       </rect>
      </property>
@@ -202,7 +202,7 @@ background-repeat: none;</string>
       <rect>
        <x>10</x>
        <y>280</y>
-       <width>971</width>
+       <width>800</width>
        <height>261</height>
       </rect>
      </property>
@@ -243,7 +243,7 @@ background-repeat: none;</string>
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>971</width>
+       <width>800</width>
        <height>261</height>
       </rect>
      </property>
@@ -284,7 +284,7 @@ background-repeat: none;</string>
       <rect>
        <x>20</x>
        <y>50</y>
-       <width>951</width>
+       <width>780</width>
        <height>211</height>
       </rect>
      </property>
@@ -308,9 +308,9 @@ background-repeat: none;</string>
     <widget class="QLabel" name="label_52">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>520</y>
-       <width>951</width>
+       <x>0</x>
+       <y>540</y>
+       <width>810</width>
        <height>20</height>
       </rect>
      </property>
@@ -331,10 +331,10 @@ color: rgb(255, 255, 255);</string>
     <widget class="QWidget" name="gridWidget" native="true">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>350</y>
-       <width>951</width>
-       <height>161</height>
+       <x>0</x>
+       <y>360</y>
+       <width>810</width>
+       <height>171</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -346,42 +346,27 @@ color: rgb(255, 255, 255);</string>
       <property name="spacing">
        <number>2</number>
       </property>
-      <item row="0" column="4">
-       <widget class="QLabel" name="label_25">
+      <item row="6" column="2">
+       <widget class="QLabel" name="label_33">
         <property name="font">
          <font>
           <family>Roboto</family>
          </font>
         </property>
         <property name="text">
-         <string>Relay State</string>
+         <string>Pack cycles</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="9">
-       <widget class="QLCDNumber" name="lcdNumber_12"/>
-      </item>
-      <item row="0" column="10">
-       <widget class="QLabel" name="label_40">
+      <item row="7" column="2">
+       <widget class="QLabel" name="label_18">
         <property name="font">
          <font>
           <family>Roboto</family>
          </font>
         </property>
         <property name="text">
-         <string>H. Cell Rst.</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="6">
-       <widget class="QLabel" name="label_34">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>H. Cell V ID</string>
+         <string>P. AmpHrs</string>
         </property>
        </widget>
       </item>
@@ -394,63 +379,21 @@ color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="8">
-       <widget class="QLabel" name="label_38">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>L. OCell Volt</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="11">
-       <widget class="QLCDNumber" name="lcdNumber_13"/>
-      </item>
-      <item row="4" column="6">
-       <widget class="QLabel" name="label_35">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>L. Cell V ID</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="3">
-       <widget class="QLCDNumber" name="lcd_highTemp"/>
-      </item>
-      <item row="2" column="8">
-       <widget class="QLabel" name="label_39">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>Av. OCell Volt</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="12">
-       <widget class="QLabel" name="label_50">
-        <property name="text">
-         <string>CCL</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="12">
+      <item row="3" column="13">
        <widget class="QLabel" name="label_51">
         <property name="text">
          <string>DCL</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="12">
+      <item row="2" column="13">
+       <widget class="QLabel" name="label_50">
+        <property name="text">
+         <string>CCL</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="13">
        <widget class="QLabel" name="label_44">
         <property name="font">
          <font>
@@ -462,34 +405,7 @@ color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="5">
-       <widget class="QLCDNumber" name="lcd_relayState"/>
-      </item>
-      <item row="4" column="10">
-       <widget class="QLabel" name="label_49">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>L. Intres ID</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="10">
-       <widget class="QLabel" name="label_43">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>Av. Cell Rst.</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="12">
+      <item row="1" column="13">
        <widget class="QLabel" name="label_45">
         <property name="font">
          <font>
@@ -498,59 +414,6 @@ color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Min Cell V</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="6">
-       <widget class="QLabel" name="label_31">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>H. Cell Volt</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="10">
-       <widget class="QLabel" name="label_48">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>H. Intres ID</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="2">
-       <widget class="QLabel" name="label_28">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>Int Temp</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="2">
-       <widget class="QLabel" name="label_22">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">border: 0px;
-background: transparent;
-color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>L. Temp</string>
         </property>
        </widget>
       </item>
@@ -572,102 +435,6 @@ color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="8">
-       <widget class="QLabel" name="label_46">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>H. OCell ID</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="2">
-       <widget class="QLabel" name="label_30">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>L. Th. ID</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="2">
-       <widget class="QLabel" name="label_29">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>H. Th. ID</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="2">
-       <widget class="QLabel" name="label_27">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>Av. Temp</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="6">
-       <widget class="QLabel" name="label_36">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>Av. Cell Volt</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="4">
-       <widget class="QLabel" name="label_33">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>Pack cycles</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="6">
-       <widget class="QLabel" name="label_32">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>L. Cell Volt</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="4">
-       <widget class="QLabel" name="label_14">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="text">
-         <string>Pack SoC</string>
-        </property>
-       </widget>
-      </item>
       <item row="0" column="0">
        <widget class="QLabel" name="label_15">
         <property name="font">
@@ -685,6 +452,157 @@ color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
+      <item row="1" column="5">
+       <widget class="QLabel" name="label_31">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>H. Cell Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QLabel" name="label_32">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>L. Cell Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="5">
+       <widget class="QLabel" name="label_36">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>Av. Cell Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="3">
+       <widget class="QLCDNumber" name="lcd_packAmphours"/>
+      </item>
+      <item row="5" column="3">
+       <widget class="QLCDNumber" name="lcd_packSOC"/>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLCDNumber" name="lcd_packResistance"/>
+      </item>
+      <item row="6" column="3">
+       <widget class="QLCDNumber" name="lcdNumber_8"/>
+      </item>
+      <item row="0" column="5">
+       <widget class="QLabel" name="label_41">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>P. Rst.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="5">
+       <widget class="QLabel" name="label_34">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>H. Cell V ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="14">
+       <widget class="QLCDNumber" name="lcdNumber_34"/>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLCDNumber" name="lcd_minPackVolt">
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="14">
+       <widget class="QLCDNumber" name="lcdNumber_14"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_29">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>H. Th. ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLCDNumber" name="lcd_highTemp"/>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_27">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>Av. Temp</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label_26">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>H. Temp</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="label_22">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>L. Temp</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLCDNumber" name="lcd_lowTemp"/>
+      </item>
       <item row="1" column="0">
        <widget class="QLabel" name="label_16">
         <property name="font">
@@ -700,15 +618,6 @@ color: rgb(255, 255, 255);
         </property>
         <property name="text">
          <string>P. Inst. Volt</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLCDNumber" name="lcd_packAmp">
-        <property name="styleSheet">
-         <string notr="true">border: 0px;
-background: transparent;
-color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
@@ -729,6 +638,15 @@ color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
+      <item row="0" column="1">
+       <widget class="QLCDNumber" name="lcd_packAmp">
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
       <item row="4" column="0">
        <widget class="QLabel" name="label_23">
         <property name="font">
@@ -743,23 +661,6 @@ color: rgb(255, 255, 255);</string>
         </property>
         <property name="text">
          <string>Max P. Volt</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="label_17">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">border: 0px;
-background: transparent;
-color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>P. Open Volt</string>
         </property>
        </widget>
       </item>
@@ -780,59 +681,55 @@ color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="7">
-       <widget class="QLCDNumber" name="lcdNumber_11"/>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_17">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 0px;
+background: transparent;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>P. Open Volt</string>
+        </property>
+       </widget>
       </item>
-      <item row="2" column="3">
+      <item row="0" column="3">
        <widget class="QLCDNumber" name="lcd_AvgTemp"/>
       </item>
-      <item row="3" column="5">
-       <widget class="QLCDNumber" name="lcd_packAmphours"/>
+      <item row="2" column="2">
+       <widget class="QLabel" name="label_30">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>L. Th. ID</string>
+        </property>
+       </widget>
       </item>
-      <item row="5" column="3">
-       <widget class="QLCDNumber" name="lcdNumber_19"/>
+      <item row="3" column="2">
+       <widget class="QLabel" name="label_28">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>Int Temp</string>
+        </property>
+       </widget>
       </item>
-      <item row="2" column="7">
-       <widget class="QLCDNumber" name="lcdNumber_23"/>
-      </item>
-      <item row="3" column="7">
-       <widget class="QLCDNumber" name="lcdNumber_24"/>
-      </item>
-      <item row="4" column="3">
-       <widget class="QLCDNumber" name="lcd_lowTermID"/>
-      </item>
-      <item row="4" column="5">
-       <widget class="QLCDNumber" name="lcd_packResistance"/>
-      </item>
-      <item row="1" column="9">
-       <widget class="QLCDNumber" name="lcdNumber_26"/>
-      </item>
-      <item row="2" column="9">
-       <widget class="QLCDNumber" name="lcdNumber_27"/>
-      </item>
-      <item row="4" column="7">
-       <widget class="QLCDNumber" name="lcdNumber_25"/>
-      </item>
-      <item row="1" column="7">
-       <widget class="QLCDNumber" name="lcdNumber_22"/>
-      </item>
-      <item row="2" column="5">
-       <widget class="QLCDNumber" name="lcdNumber_8"/>
-      </item>
-      <item row="3" column="11">
-       <widget class="QLCDNumber" name="lcdNumber_32"/>
-      </item>
-      <item row="3" column="13">
-       <widget class="QLCDNumber" name="lcd_DCL"/>
-      </item>
-      <item row="2" column="13">
+      <item row="2" column="14">
        <widget class="QLCDNumber" name="lcd_CCL"/>
       </item>
-      <item row="1" column="11">
-       <widget class="QLCDNumber" name="lcdNumber_30"/>
-      </item>
-      <item row="2" column="11">
-       <widget class="QLCDNumber" name="lcdNumber_31"/>
+      <item row="3" column="14">
+       <widget class="QLCDNumber" name="lcd_DCL"/>
       </item>
       <item row="4" column="1">
        <widget class="QLCDNumber" name="lcd_maxPackVolt">
@@ -843,10 +740,70 @@ color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
-      <item row="4" column="11">
-       <widget class="QLCDNumber" name="lcdNumber_33"/>
+      <item row="2" column="3">
+       <widget class="QLCDNumber" name="lcd_lowTermID"/>
       </item>
-      <item row="0" column="8">
+      <item row="1" column="3">
+       <widget class="QLCDNumber" name="lcd_maxTermID"/>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLCDNumber" name="lcdNumber_19"/>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLabel" name="label_25">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>Relay State</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLCDNumber" name="lcd_relayState"/>
+      </item>
+      <item row="5" column="2">
+       <widget class="QLabel" name="label_14">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>Pack SoC</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="5">
+       <widget class="QLabel" name="label_35">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>L. Cell V ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="6">
+       <widget class="QLCDNumber" name="lcdNumber_11"/>
+      </item>
+      <item row="2" column="6">
+       <widget class="QLCDNumber" name="lcdNumber_22"/>
+      </item>
+      <item row="3" column="6">
+       <widget class="QLCDNumber" name="lcdNumber_23"/>
+      </item>
+      <item row="4" column="6">
+       <widget class="QLCDNumber" name="lcdNumber_24"/>
+      </item>
+      <item row="5" column="6">
+       <widget class="QLCDNumber" name="lcdNumber_25"/>
+      </item>
+      <item row="6" column="5">
        <widget class="QLabel" name="label_37">
         <property name="font">
          <font>
@@ -858,25 +815,49 @@ color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="13">
-       <widget class="QLCDNumber" name="lcdNumber_34"/>
-      </item>
-      <item row="4" column="9">
-       <widget class="QLCDNumber" name="lcdNumber_29"/>
-      </item>
-      <item row="3" column="9">
-       <widget class="QLCDNumber" name="lcdNumber_28"/>
-      </item>
-      <item row="5" column="1">
-       <widget class="QLCDNumber" name="lcd_minPackVolt">
-        <property name="styleSheet">
-         <string notr="true">border: 0px;
-background: transparent;
-color: rgb(255, 255, 255);</string>
+      <item row="7" column="5">
+       <widget class="QLabel" name="label_38">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>L. OCell Volt</string>
         </property>
        </widget>
       </item>
-      <item row="4" column="8">
+      <item row="6" column="6">
+       <widget class="QLCDNumber" name="lcdNumber_12"/>
+      </item>
+      <item row="7" column="6">
+       <widget class="QLCDNumber" name="lcdNumber_26"/>
+      </item>
+      <item row="0" column="9">
+       <widget class="QLabel" name="label_39">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>Av. OCell Volt</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="9">
+       <widget class="QLabel" name="label_46">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>H. OCell ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="9">
        <widget class="QLabel" name="label_47">
         <property name="font">
          <font>
@@ -888,10 +869,28 @@ color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="3">
-       <widget class="QLCDNumber" name="lcd_lowTemp"/>
+      <item row="0" column="10">
+       <widget class="QLCDNumber" name="lcdNumber_27"/>
       </item>
       <item row="1" column="10">
+       <widget class="QLCDNumber" name="lcdNumber_28"/>
+      </item>
+      <item row="2" column="10">
+       <widget class="QLCDNumber" name="lcdNumber_29"/>
+      </item>
+      <item row="3" column="9">
+       <widget class="QLabel" name="label_40">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>H. Cell Rst.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="9">
        <widget class="QLabel" name="label_42">
         <property name="font">
          <font>
@@ -903,55 +902,56 @@ color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="5">
-       <widget class="QLCDNumber" name="lcd_packSOC"/>
-      </item>
-      <item row="0" column="2">
-       <widget class="QLabel" name="label_26">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">border: 0px;
-background: transparent;
-color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>H. Temp</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="13">
-       <widget class="QLCDNumber" name="lcdNumber_14"/>
-      </item>
-      <item row="4" column="4">
-       <widget class="QLabel" name="label_41">
+      <item row="5" column="9">
+       <widget class="QLabel" name="label_43">
         <property name="font">
          <font>
           <family>Roboto</family>
          </font>
         </property>
         <property name="text">
-         <string>P. Rst.</string>
+         <string>Av. Cell Rst.</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="4">
-       <widget class="QLabel" name="label_18">
+      <item row="6" column="9">
+       <widget class="QLabel" name="label_48">
         <property name="font">
          <font>
           <family>Roboto</family>
          </font>
         </property>
         <property name="text">
-         <string>P. AmpHrs</string>
+         <string>H. Intres ID</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="3">
-       <widget class="QLCDNumber" name="lcd_maxTermID"/>
+      <item row="7" column="9">
+       <widget class="QLabel" name="label_49">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>L. Intres ID</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="10">
+       <widget class="QLCDNumber" name="lcdNumber_13"/>
+      </item>
+      <item row="4" column="10">
+       <widget class="QLCDNumber" name="lcdNumber_30"/>
+      </item>
+      <item row="5" column="10">
+       <widget class="QLCDNumber" name="lcdNumber_31"/>
+      </item>
+      <item row="6" column="10">
+       <widget class="QLCDNumber" name="lcdNumber_32"/>
+      </item>
+      <item row="7" column="10">
+       <widget class="QLCDNumber" name="lcdNumber_33"/>
       </item>
      </layout>
     </widget>
@@ -960,7 +960,7 @@ color: rgb(255, 255, 255);</string>
       <rect>
        <x>20</x>
        <y>40</y>
-       <width>951</width>
+       <width>780</width>
        <height>121</height>
       </rect>
      </property>
@@ -1027,7 +1027,7 @@ background-color:rgb(232, 232, 232);
       <rect>
        <x>20</x>
        <y>200</y>
-       <width>951</width>
+       <width>780</width>
        <height>121</height>
       </rect>
      </property>
@@ -1042,10 +1042,10 @@ background-color:rgb(232, 232, 232);
     <widget class="QPushButton" name="pushButton_8">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>340</y>
+       <x>0</x>
+       <y>360</y>
        <width>971</width>
-       <height>201</height>
+       <height>211</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -1062,7 +1062,7 @@ background-repeat: none;</string>
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>971</width>
+       <width>800</width>
        <height>321</height>
       </rect>
      </property>
@@ -1077,8 +1077,8 @@ background-color:rgb(232, 232, 232);
       <string/>
      </property>
     </widget>
-    <zorder>pushButton_9</zorder>
     <zorder>pushButton_8</zorder>
+    <zorder>pushButton_9</zorder>
     <zorder>label_52</zorder>
     <zorder>gridWidget</zorder>
     <zorder>BMS_volt_plot</zorder>
@@ -3738,8 +3738,8 @@ font-family: &quot;Roboto&quot;;
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>363</width>
-       <height>186</height>
+       <width>380</width>
+       <height>171</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout">
@@ -3775,6 +3775,9 @@ color: rgb(255, 0, 0);</string>
         <property name="font">
          <font>
           <family>Roboto</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">
@@ -3874,6 +3877,9 @@ padding: 2px auto;</string>
         <property name="font">
          <font>
           <family>Roboto</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">
@@ -3892,6 +3898,9 @@ background-repeat: none;</string>
         <property name="font">
          <font>
           <family>Roboto</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
          </font>
         </property>
         <property name="styleSheet">
@@ -4049,6 +4058,9 @@ background-repeat: none;</string>
     <property name="font">
      <font>
       <family>Roboto</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -4072,6 +4084,9 @@ background: transparent;
     <property name="font">
      <font>
       <family>Roboto</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -4113,6 +4128,9 @@ color: rgb(0, 0, 0);</string>
     <property name="font">
      <font>
       <family>Roboto</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -4170,19 +4188,6 @@ border: none;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <zorder>mppt_scroll</zorder>
-   <zorder>mppt_scroll</zorder>
-   <zorder>mppt_scroll</zorder>
-   <zorder>lcd_max_speed</zorder>
-   <zorder>centralWidget</zorder>
-   <zorder>centralWidget</zorder>
-   <zorder>label</zorder>
-   <zorder>label_3</zorder>
-   <zorder>lcd_torque</zorder>
-   <zorder>label_4</zorder>
-   <zorder>lcd_gap</zorder>
-   <zorder>tab_grafos</zorder>
-   <zorder>mppt_stats_tittle</zorder>
   </widget>
   <zorder>stats_frame</zorder>
   <zorder>pushButton_3</zorder>
@@ -4195,7 +4200,7 @@ border: none;</string>
   <customwidget>
    <class>QCustomPlot</class>
    <extends>QWidget</extends>
-   <header location="global">../../qcustomplot.h</header>
+   <header location="global">qcustomplot.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
