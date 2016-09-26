@@ -18,15 +18,15 @@ Dialog::Dialog(QWidget *parent) :
 
     qDebug() << "Iniciando interfaz" << endl;
 
-    ui->lcd_amperaje1->display("----");
-    ui->lcd_amperaje2->display("----");
-    ui->lcd_voltaje1->display("----");
-    ui->lcd_voltaje2->display("----");
-    ui->lcd_velocidad->display("----");
+    ui->lcd_mppt_1_iin->display("----");
+    ui->lcd_mppt_2_iin->display("----");
+    ui->lcd_mppt_1_uout->display("----");
+    ui->lcd_mppt_2_uout->display("----");
+    //ui->lcd_velocidad->display("----");
     ui->lcd_torque->display("----");
     ui->lcd_gap->display("----");
-    ui->lcd_max_voltaje->display("----");
-    ui->lcd_min_voltaje->display("----");
+    //ui->lcd_max_voltaje->display("----");
+    //ui->lcd_min_voltaje->display("----");
     ui->lcd_max_speed->display("----");
 
     //Iniciar arrays con zeros
@@ -98,25 +98,25 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
             qDebug() << "Corriente: " << posicion << ": " << valor;
             amperaje1 = value;
             ui->lcd_packAmp->display(parsed_data);
-            ui->lcd_amperaje1->display(parsed_data);
-            ui->lcd_amperaje2->display(parsed_data);
+            ui->lcd_mppt_1_iin->display(parsed_data);
+            ui->lcd_mppt_2_iin->display(parsed_data);
 
         } else if (name == "PACK_VTG") {
             qDebug() << "PACK INST VOLTAGE:  " << posicion << ": " << valor;
             voltaje1 = value;
             ui->lcd_packVolt->display(parsed_data);
-            ui->lcd_voltaje1->display(parsed_data);
-            ui->lcd_voltaje2->display(parsed_data);
+            //ui->lcd_voltaje1->display(parsed_data);
+            //ui->lcd_voltaje2->display(parsed_data);
 
         } else if (name == "MAX_VTG") {
             qDebug() << "MAXIMUM PACK VOLTAGE: " << posicion << ": " << valor;
             ui->lcd_maxPackVolt->display(parsed_data);
-            ui->lcd_max_voltaje->display(parsed_data);
+            //ui->lcd_max_voltaje->display(parsed_data);
 
         } else if (name == "MIN_VTG") {
             qDebug() << "MINIMUM PACK VOLTAGE: " << posicion << ": " << valor;
             ui->lcd_minPackVolt->display(parsed_data);
-            ui->lcd_min_voltaje->display(parsed_data);
+            //ui->lcd_min_voltaje->display(parsed_data);
 
         } else if (name == "HIGH_TEMP") {
             qDebug() << "HIGH TEMPERATURE: " << posicion << ": " << valor;
