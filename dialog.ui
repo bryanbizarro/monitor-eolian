@@ -14,7 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">font-family: &quot;Roboto&quot;;</string>
+   <string notr="true"/>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
@@ -41,7 +41,7 @@ background-repeat: none;
     <rect>
      <x>379</x>
      <y>90</y>
-     <width>441</width>
+     <width>481</width>
      <height>591</height>
     </rect>
    </property>
@@ -58,124 +58,120 @@ border-radius: 5px;
     <attribute name="title">
      <string>MPPT</string>
     </attribute>
-    <widget class="QCustomPlot" name="Plot2" native="true">
+    <widget class="QFrame" name="mmpt_frame_voltaje_plot">
      <property name="geometry">
       <rect>
-       <x>390</x>
-       <y>320</y>
-       <width>321</width>
-       <height>211</height>
+       <x>10</x>
+       <y>10</y>
+       <width>451</width>
+       <height>260</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(223, 223, 223);
+      <string notr="true">background-color: rgb(223, 223, 223);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roboto</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(223, 223, 223);
 border: none;
 background-repeat: none;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_11">
-     <property name="geometry">
-      <rect>
-       <x>400</x>
-       <y>290</y>
-       <width>161</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Roboto</family>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(223, 223, 223);
+      </property>
+      <property name="text">
+       <string>Gráfico Voltaje</string>
+      </property>
+     </widget>
+     <widget class="QCustomPlot" name="Plot2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>431</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(223, 223, 223);
 border: none;
 background-repeat: none;</string>
-     </property>
-     <property name="text">
-      <string>Gráfico Voltaje</string>
-     </property>
+      </property>
+     </widget>
     </widget>
-    <widget class="QLabel" name="label_10">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>290</y>
-       <width>191</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Roboto</family>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(223, 223, 223);
-border: none;
-background-repeat: none;</string>
-     </property>
-     <property name="text">
-      <string>Gráfico Amperaje</string>
-     </property>
-    </widget>
-    <widget class="QCustomPlot" name="Plot1" native="true">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>320</y>
-       <width>321</width>
-       <height>211</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(223, 223, 223);
-border: none;
-background-repeat: none;</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_4">
+    <widget class="QFrame" name="frame">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>280</y>
-       <width>351</width>
+       <width>451</width>
        <height>261</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(223, 223, 223);
+      <string notr="true">background-color: rgb(223, 223, 223);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>191</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roboto</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(223, 223, 223);
 border: none;
 background-repeat: none;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_5">
-     <property name="geometry">
-      <rect>
-       <x>380</x>
-       <y>280</y>
-       <width>371</width>
-       <height>261</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(223, 223, 223);
+      </property>
+      <property name="text">
+       <string>Gráfico Amperaje</string>
+      </property>
+     </widget>
+     <widget class="QCustomPlot" name="Plot1" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>431</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(223, 223, 223);
 border: none;
 background-repeat: none;</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
+      </property>
+     </widget>
     </widget>
-    <zorder>pushButton_5</zorder>
-    <zorder>pushButton_4</zorder>
-    <zorder>Plot2</zorder>
-    <zorder>label_11</zorder>
-    <zorder>label_10</zorder>
-    <zorder>Plot1</zorder>
    </widget>
    <widget class="QWidget" name="tab_motor">
     <attribute name="title">
@@ -186,7 +182,7 @@ background-repeat: none;</string>
       <rect>
        <x>20</x>
        <y>320</y>
-       <width>780</width>
+       <width>431</width>
        <height>211</height>
       </rect>
      </property>
@@ -201,7 +197,7 @@ background-repeat: none;</string>
       <rect>
        <x>10</x>
        <y>280</y>
-       <width>800</width>
+       <width>451</width>
        <height>261</height>
       </rect>
      </property>
@@ -242,7 +238,7 @@ background-repeat: none;</string>
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>800</width>
+       <width>451</width>
        <height>261</height>
       </rect>
      </property>
@@ -283,7 +279,7 @@ background-repeat: none;</string>
       <rect>
        <x>20</x>
        <y>50</y>
-       <width>780</width>
+       <width>431</width>
        <height>211</height>
       </rect>
      </property>
@@ -959,7 +955,7 @@ color: rgb(255, 255, 255);</string>
       <rect>
        <x>20</x>
        <y>40</y>
-       <width>780</width>
+       <width>431</width>
        <height>121</height>
       </rect>
      </property>
@@ -1026,7 +1022,7 @@ background-color:rgb(232, 232, 232);
       <rect>
        <x>20</x>
        <y>200</y>
-       <width>780</width>
+       <width>431</width>
        <height>121</height>
       </rect>
      </property>
@@ -1061,7 +1057,7 @@ background-repeat: none;</string>
       <rect>
        <x>10</x>
        <y>10</y>
-       <width>800</width>
+       <width>451</width>
        <height>321</height>
       </rect>
      </property>
@@ -1111,9 +1107,9 @@ background-color:rgb(232, 232, 232);
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>440</y>
+      <y>430</y>
       <width>380</width>
-      <height>151</height>
+      <height>161</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -1137,9 +1133,9 @@ font-family: &quot;Roboto&quot;;
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>0</y>
+       <y>-1</y>
        <width>363</width>
-       <height>171</height>
+       <height>162</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout">
@@ -1272,27 +1268,6 @@ padding: 2px auto;</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
-       <widget class="QLabel" name="label_5">
-        <property name="font">
-         <font>
-          <family>Roboto</family>
-          <pointsize>12</pointsize>
-          <weight>75</weight>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background-color: transparent;
-background: none;
-border: none;
-background-repeat: none;</string>
-        </property>
-        <property name="text">
-         <string>Uin</string>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="2">
        <widget class="QLabel" name="label_6">
         <property name="font">
@@ -1369,7 +1344,20 @@ background-repeat: none;</string>
         </property>
        </widget>
       </item>
-      <item row="11" column="0">
+      <item row="5" column="0" rowspan="2" colspan="4">
+       <widget class="Line" name="line">
+        <property name="styleSheet">
+         <string notr="true">background-color: #000000;
+border: 0px none white;
+margin: 0;
+padding: 0;</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="2">
        <widget class="QLabel" name="label_21">
         <property name="font">
          <font>
@@ -1387,186 +1375,41 @@ background-repeat: none;</string>
         </property>
        </widget>
       </item>
-      <item row="5" column="0" rowspan="2" colspan="4">
-       <widget class="Line" name="line">
-        <property name="styleSheet">
-         <string notr="true">background-color: #000000;
-border: 0px none white;
-margin: 0;
-padding: 0;</string>
+      <item row="10" column="1">
+       <widget class="QLCDNumber" name="lcdNumber"/>
+      </item>
+      <item row="10" column="3">
+       <widget class="QLCDNumber" name="lcdNumber_2"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
         </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+        </property>
+        <property name="text">
+         <string>Uin</string>
         </property>
        </widget>
       </item>
      </layout>
     </widget>
    </widget>
-   <widget class="QLCDNumber" name="lcd_max_speed">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>370</y>
-      <width>81</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(232, 232, 232);
-background: transparent;
-</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="centralWidget" native="true">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>20</y>
-      <width>291</width>
-      <height>251</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(26, 60, 101);
-border: none;
-background-repeat: none;</string>
-    </property>
-    <widget class="QWidget" name="verticalLayoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>0</y>
-       <width>291</width>
-       <height>251</height>
-      </rect>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <property name="leftMargin">
-       <number>0</number>
-      </property>
-     </layout>
-    </widget>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>370</y>
-      <width>171</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Roboto</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color:rgb(232, 232, 232);
-background: transparent;
-</string>
-    </property>
-    <property name="text">
-     <string>VELOCIDAD MÁXIMA</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>330</y>
-      <width>92</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Roboto</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: transparent;
-background: none;
-border: none;
-background-repeat: none;
-color: #FFF;</string>
-    </property>
-    <property name="text">
-     <string>TORQUE</string>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="lcd_torque">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>330</y>
-      <width>79</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent;
-border: none;
-background-repeat: none;
-color: rgb(0, 0, 0);</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>330</y>
-      <width>92</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Roboto</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: transparent;
-background: none;
-border: none;
-background-repeat: none;
-color: #FFF;</string>
-    </property>
-    <property name="text">
-     <string>GAP</string>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="lcd_gap">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>330</y>
-      <width>81</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent;
-border: none;
-background-repeat: none;
-color: rgb(0, 0, 0);</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="mppt_stats_tittle">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>400</y>
+      <y>390</y>
       <width>380</width>
       <height>41</height>
      </rect>
@@ -1584,7 +1427,7 @@ color: rgb(0, 0, 0);</string>
 border: none;</string>
     </property>
     <property name="text">
-     <string>EOLIAN</string>
+     <string>MPPT</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1594,7 +1437,7 @@ border: none;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>280</y>
+      <y>270</y>
       <width>341</width>
       <height>41</height>
      </rect>
@@ -1613,14 +1456,13 @@ border-top-left-radius: 7px ;border-top-right-radius: 7px;border-bottom-right-ra
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>280</y>
+      <y>270</y>
       <width>341</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Roboto</family>
       <pointsize>10</pointsize>
       <weight>9</weight>
       <italic>false</italic>
@@ -1654,32 +1496,327 @@ QProgressBar{
      <string>%p%</string>
     </property>
    </widget>
-   <zorder>mppt_scroll</zorder>
-   <zorder>lcd_max_speed</zorder>
-   <zorder>label</zorder>
-   <zorder>label_3</zorder>
-   <zorder>lcd_torque</zorder>
-   <zorder>label_4</zorder>
-   <zorder>lcd_gap</zorder>
-   <zorder>mppt_stats_tittle</zorder>
-   <zorder>pushButton_3</zorder>
-   <zorder>SoC_bar</zorder>
-   <zorder>centralWidget</zorder>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>361</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="bottomMargin">
+        <number>2</number>
+       </property>
+       <item>
+        <widget class="QLCDNumber" name="lcd_max_speed">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(232, 232, 232);
+background: transparent;
+border:  none;
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="lineWidth">
+          <number>2</number>
+         </property>
+         <property name="midLineWidth">
+          <number>2</number>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="digitCount">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Filled</enum>
+         </property>
+         <property name="value" stdset="0">
+          <double>91.000000000000000</double>
+         </property>
+         <property name="intValue" stdset="0">
+          <number>91</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(232, 232, 232);
+background: transparent;</string>
+         </property>
+         <property name="text">
+          <string>VEL. MÁX.</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QLCDNumber" name="lcd_gap">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: transparent;
+border: none;
+background-repeat: none;
+color:rgb(232, 232, 232);</string>
+         </property>
+         <property name="digitCount">
+          <number>1</number>
+         </property>
+         <property name="intValue" stdset="0">
+          <number>3</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;
+color: #FFF;</string>
+         </property>
+         <property name="text">
+          <string notr="true">GAP</string>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLCDNumber" name="lcd_torque">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>48</pointsize>
+          </font>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: transparent;
+border: none;
+background-repeat: none;
+color:rgb(232, 232, 232);</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="digitCount">
+          <number>2</number>
+         </property>
+         <property name="mode">
+          <enum>QLCDNumber::Dec</enum>
+         </property>
+         <property name="intValue" stdset="0">
+          <number>80</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;
+color: #FFF;</string>
+         </property>
+         <property name="text">
+          <string>TORQUE</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>10</y>
+      <width>291</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="layout_velocimetro"/>
+   </widget>
   </widget>
   <widget class="QTabWidget" name="tabWidget_bms">
    <property name="geometry">
     <rect>
-     <x>880</x>
+     <x>870</x>
      <y>90</y>
-     <width>311</width>
+     <width>321</width>
      <height>441</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">border: none;</string>
+    <string notr="true">QTabWidget::pane { /* Linea bajo pestanas */
+border: 2px solid #C2C7CB;
+border-radius: 6px;
+background-color: #E1E1E1;
+}
+QTabWidget::tab-bar {
+left: 5px; /* mueve pestanas */
+}
+QTabBar::tab { /* Diseno de las pestanas */
+background: 	qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #E1E1E1, 															stop: 0.4 #DDDDDD, stop: 0.5 #D8D8D8, stop: 														1.0 #D3D3D3);
+font-family: &quot;Roboto&quot;;
+border: 2px solid #C4C4C3;
+border-bottom-color: #C2C7CB; /* same as the pane color */
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+min-width: 12ex;
+padding: 5px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #fafafa, stop: 0.4 #f4f4f4, stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+}
+QTabBar::tab:selected {
+border-color: #9B9B9B;
+border-bottom-color: #C2C7CB; /* same as pane color */
+}
+QTabBar::tab:!selected {
+margin-top: 2px; /* make non-selected tabs look smaller */
+}
+QTabBar::tab:selected {
+    /* expand/overlap to the left and right by 4px */
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+QTabBar::tab:first:selected {
+    margin-left: 0; /* the first selected tab has nothing to overlap with on the left */
+}
+
+QTabBar::tab:last:selected {
+    margin-right: 0; /* the last selected tab has nothing to overlap with on the right */
+}
+
+QTabBar::tab:only-one {
+    margin: 0; /* if there is only one tab, we don't want overlapping margins */
+}</string>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab_bms_temp">
     <attribute name="title">
@@ -1688,7 +1825,7 @@ QProgressBar{
     <widget class="QFrame" name="bms_temps">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>20</x>
        <y>10</y>
        <width>281</width>
        <height>311</height>
@@ -1714,7 +1851,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -1742,7 +1878,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -1770,7 +1905,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -1798,7 +1932,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -1826,7 +1959,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -1854,7 +1986,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -1882,7 +2013,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -1910,7 +2040,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -1938,7 +2067,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -1966,7 +2094,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -1994,7 +2121,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2022,7 +2148,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2050,7 +2175,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2078,7 +2202,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2106,7 +2229,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2134,7 +2256,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2162,7 +2283,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2190,7 +2310,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2218,7 +2337,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2246,7 +2364,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2274,7 +2391,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2302,7 +2418,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2330,7 +2445,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2358,7 +2472,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2386,7 +2499,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2414,7 +2526,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2442,7 +2553,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2470,7 +2580,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2498,7 +2607,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2526,7 +2634,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2552,9 +2659,9 @@ QProgressBar{
     <widget class="QFrame" name="bms_amps">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>20</x>
        <y>10</y>
-       <width>311</width>
+       <width>281</width>
        <height>331</height>
       </rect>
      </property>
@@ -2575,7 +2682,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2603,7 +2709,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2631,7 +2736,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2659,7 +2763,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2687,7 +2790,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2715,7 +2817,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2743,7 +2844,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2771,7 +2871,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2799,7 +2898,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2827,7 +2925,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2855,7 +2952,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2883,7 +2979,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2911,7 +3006,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2939,7 +3033,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2967,7 +3060,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -2995,7 +3087,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3023,7 +3114,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3051,7 +3141,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3079,7 +3168,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3107,7 +3195,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3135,7 +3222,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3163,7 +3249,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3191,7 +3276,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3219,7 +3303,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3247,7 +3330,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3275,7 +3357,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3303,7 +3384,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3331,7 +3411,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3359,7 +3438,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3387,7 +3465,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3413,7 +3490,7 @@ QProgressBar{
     <widget class="QFrame" name="bms_volts">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>20</x>
        <y>10</y>
        <width>281</width>
        <height>401</height>
@@ -3436,7 +3513,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3464,7 +3540,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3492,7 +3567,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3520,7 +3594,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3548,7 +3621,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3576,7 +3648,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3604,7 +3675,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3632,7 +3702,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3660,7 +3729,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3688,7 +3756,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3716,7 +3783,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3744,7 +3810,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3772,7 +3837,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3800,7 +3864,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3828,7 +3891,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3856,7 +3918,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3884,7 +3945,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3912,7 +3972,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3940,7 +3999,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3968,7 +4026,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -3996,7 +4053,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4024,7 +4080,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4052,7 +4107,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4080,7 +4134,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4108,7 +4161,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4136,7 +4188,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4164,7 +4215,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4192,7 +4242,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4220,7 +4269,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4248,7 +4296,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4276,7 +4323,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4304,7 +4350,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4332,7 +4377,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4360,7 +4404,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4388,7 +4431,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4416,7 +4458,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4444,7 +4485,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4472,7 +4512,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>
@@ -4500,7 +4539,6 @@ QProgressBar{
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
         <pointsize>10</pointsize>
         <weight>9</weight>
         <italic>false</italic>

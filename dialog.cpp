@@ -582,7 +582,7 @@ void Dialog::SetupSpeedometer(){
     mSpeedNeedle->setValueRange(0,150);
     mSpeedGauge->addBackground(7);
     mSpeedGauge->addGlass(88);
-    ui->verticalLayout->addWidget(mSpeedGauge);
+    ui->layout_velocimetro->addWidget(mSpeedGauge);
 
 }
 

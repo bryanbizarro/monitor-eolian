@@ -1,3 +1,4 @@
 QDialog {
     background-color: white;
+	font-family: "Roboto";
 }
