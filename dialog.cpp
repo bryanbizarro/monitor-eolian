@@ -39,10 +39,19 @@ Dialog::Dialog(QWidget *parent) :
     parsed_data = "";
 
 //  Dialog::GetProductVendorID();
+    double v1 = 2.956;
+    for(int i = 0; i < 30; i++){ bms_volt[i] = v1; v1 += 0.123;}
+    bms_temp[0] = 50.5;
+    bms_temp[1] = 70.3;
+    bms_temp[2] = 10.9;
+    bms_temp[3] = 40.7;
+
     Dialog::SetupArduino();
     Dialog::SetupPlots();
     Dialog::SetupSpeedometer();
     Dialog::SetupProgressbars();
+
+
 
 }
 
@@ -60,7 +69,6 @@ void Dialog::readSerial(){
      *
      */
     QStringList buffer_split = serialBuffer.split("\n"); //  split the serialBuffer string, parsing with '\n' as the separator
-
     //  Check to see if there less than 3 tokens in buffer_split.
     //  If there are at least 3 then this means there were 2 commas,
     //  means there is a parsed temperature value as the second token (between 2 commas)
@@ -80,8 +88,10 @@ void Dialog::readSerial(){
         foreach (QString data, buffer_split) {
             qDebug() << data << endl;
             QStringList unDato = data.split(",");
-            if (unDato.length() > 1){
+            if (unDato.length()==2){
             Dialog::updateValues(unDato[0],unDato[1]);
+            } else if (unDato.length()==3){
+            Dialog::updateValues(unDato[0],unDato[2], unDato[1].toInt());
             }
         }
     }
@@ -101,19 +111,33 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
             ui->lcd_mppt_1_iin->display(parsed_data);
             ui->lcd_mppt_2_iin->display(parsed_data);
 
-        } else if (name == "PACK_VTG") {
+        } else if (name == "PACK_CURRENT") {
+            qDebug() << "PACK CURRENT:  " << posicion << ": " << valor;
+            ui->lcd_packAmp->display(parsed_data);
+
+
+        } else if (name == "PACK_INST_VTG") {
             qDebug() << "PACK INST VOLTAGE:  " << posicion << ": " << valor;
             voltaje1 = value;
             ui->lcd_packVolt->display(parsed_data);
-            //ui->lcd_voltaje1->display(parsed_data);
-            //ui->lcd_voltaje2->display(parsed_data);
 
-        } else if (name == "MAX_VTG") {
+
+        } else if (name == "PACK_OPEN_VTG") {
+            qDebug() << "PACK OPEN VOLTAGE:  " << posicion << ": " << valor;
+            voltaje1 = value;
+            ui->lcd_openVolt->display(parsed_data);
+
+        } else if (name == "PACK_ABSCURRENT") {
+            qDebug() << "PACK ABSOLUTE CURRENT:  " << posicion << ": " << valor;
+            voltaje1 = value;
+            ui->lcd_absCurrent->display(parsed_data);
+
+        } else if (name == "MAXIM_PACK_VTG") {
             qDebug() << "MAXIMUM PACK VOLTAGE: " << posicion << ": " << valor;
             ui->lcd_maxPackVolt->display(parsed_data);
             //ui->lcd_max_voltaje->display(parsed_data);
 
-        } else if (name == "MIN_VTG") {
+        } else if (name == "MINIM_PACK_VTG") {
             qDebug() << "MINIMUM PACK VOLTAGE: " << posicion << ": " << valor;
             ui->lcd_minPackVolt->display(parsed_data);
             //ui->lcd_min_voltaje->display(parsed_data);
@@ -127,23 +151,31 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
             ui->lcd_lowTemp->display(parsed_data);
             //carga_restante = value;
 
-        } else if (name == "HIGH_T_ID"){
+        } else if (name == "HIGH_TID"){
             qDebug() << "HIGH THERMISTOR ID: " << posicion << ": " << valor;
             ui->lcd_maxTermID->display(parsed_data);
 
-        } else if (name == "LOW_T_ID"){
+        } else if (name == "LOW_TID"){
             qDebug() << "LOW THERMISTOR ID: " << posicion << ": " << valor;
             ui->lcd_lowTermID->display(parsed_data);
+
+        } else if (name == "AVG_TEMP"){
+            qDebug() << "AVERAGE TEMPERATURE: " << posicion << ": " << valor;
+            ui->lcd_AvgTemp->display(parsed_data);
+
+        } else if (name == "INT_TEMP"){
+            qDebug() << "INTERNAL TEMPERATURE: " << posicion << ": " << valor;
+            ui->lcd_internalTemperature->display(parsed_data);
 
         } else if (name == "PACK_DCL"){
             qDebug() << "PACK DCL [" << posicion << "]: " << valor;
             //bms_temp[posicion-1] = valor.toDouble();
-            ui->lcd_DCL->display(parsed_data);
+            //ui->lcd_DCL->display(parsed_data);
 
         } else if (name == "PACK_CCL"){
             qDebug() << "PACK CCL [" << posicion << "]: " << valor;
             //bms_amp[posicion-1] = valor.toDouble();
-            ui->lcd_CCL->display(parsed_data);
+            //ui->lcd_CCL->display(parsed_data);
 
         } else if (name == "REL_STATE"){
             qDebug() << "RELAY STATE [" << posicion << "]: " << valor;
@@ -156,7 +188,7 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
 
         } else if (name == "PACK_RES"){
             qDebug() << "PACK RESISTANCE [" << posicion << "]: " << valor;
-            ui->lcd_packResistance->display(parsed_data);
+            //ui->lcd_packResistance->display(parsed_data);
 
         } else if (name == "PACK_OPENVTG"){
             qDebug() << "PACK OPEN VOLTAJE [" << posicion << "]: " << valor;
@@ -165,6 +197,14 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
         } else if (name == "PACK_AMPH"){
             qDebug() << "PACK AMPHOURS [" << posicion << "]: " << valor;
             ui->lcd_relayState->display(parsed_data);
+
+        } else if (name == "CELL_INSTVTG"){
+            qDebug() << "CELL INST VOLTAGE [" << posicion << "]: " << valor;
+            bms_volt[posicion] = value*0.0001;
+
+        } else if (name == "TEMP"){
+            qDebug() << "CELL INST VOLTAGE [" << posicion << "]: " << valor;
+            bms_temp[posicion] = value;
 
         } else {
             qDebug() << "SERIAL READ ERROR";
@@ -176,7 +216,7 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
     mSpeedNeedle->setCurrentValue(speed);
     Dialog::maximavelocidad();
     maxvelaux = maxvel;
-
+    SetupProgressbars();
     ui->lcd_max_speed->display(maxvelaux);
 
 }
@@ -309,16 +349,13 @@ QString Dialog::barAmpStyle(double value){
 }
 
 QString Dialog::barVoltStyle(double value){
-    if ((value >=0)&&(value <25)){
-        return safe;
-    } else if ((value >=25)&&(value <50)){
-        return safe1;
-    } else if ((value >=50)&&(value <75)){
-        return danger;
-    } else if ((value >=75)&&(value <=100)){
-        return danger1;
+    if ((value < 3) || (value > 5)){
+        return voltDangerStyle;
+    } else if ((value < 3.7) || (value > 4.3)){
+        return voltCautionStyle;
+    } else {
+        return voltSafeStyle;
     }
-    return danger1;
 }
 
 QString Dialog::barSoCStyle(double value){
@@ -344,15 +381,15 @@ void Dialog::SetupProgressbars(){
 
     //Temp Bars
 
-    ui->temp_bar_1->setValue(bms_temp[0]);
-    ui->temp_bar_2->setValue(bms_temp[1]);
-    ui->temp_bar_3->setValue(bms_temp[2]);
-    ui->temp_bar_4->setValue(bms_temp[3]);
-    ui->temp_bar_5->setValue(bms_temp[4]);
-    ui->temp_bar_6->setValue(bms_temp[5]);
-    ui->temp_bar_7->setValue(bms_temp[6]);
-    ui->temp_bar_8->setValue(bms_temp[7]);
-    ui->temp_bar_9->setValue(bms_temp[8]);
+    ui->temp_bar_01->setValue(bms_temp[0]);
+    ui->temp_bar_02->setValue(bms_temp[1]);
+    ui->temp_bar_03->setValue(bms_temp[2]);
+    ui->temp_bar_04->setValue(bms_temp[3]);
+    ui->temp_bar_05->setValue(bms_temp[4]);
+    ui->temp_bar_06->setValue(bms_temp[5]);
+    ui->temp_bar_07->setValue(bms_temp[6]);
+    ui->temp_bar_08->setValue(bms_temp[7]);
+    ui->temp_bar_09->setValue(bms_temp[8]);
     ui->temp_bar_10->setValue(bms_temp[9]);
 
     ui->temp_bar_11->setValue(bms_temp[10]);
@@ -376,6 +413,39 @@ void Dialog::SetupProgressbars(){
     ui->temp_bar_28->setValue(bms_temp[27]);
     ui->temp_bar_29->setValue(bms_temp[28]);
     ui->temp_bar_30->setValue(bms_temp[29]);
+
+    ui->temp_bar_31->setValue(bms_temp[30]);
+    ui->temp_bar_32->setValue(bms_temp[31]);
+    ui->temp_bar_33->setValue(bms_temp[32]);
+    ui->temp_bar_34->setValue(bms_temp[33]);
+    ui->temp_bar_35->setValue(bms_temp[34]);
+    ui->temp_bar_36->setValue(bms_temp[35]);
+    ui->temp_bar_37->setValue(bms_temp[36]);
+    ui->temp_bar_38->setValue(bms_temp[37]);
+    ui->temp_bar_39->setValue(bms_temp[38]);
+    ui->temp_bar_40->setValue(bms_temp[39]);
+
+    ui->temp_bar_41->setValue(bms_temp[40]);
+    ui->temp_bar_42->setValue(bms_temp[41]);
+    ui->temp_bar_43->setValue(bms_temp[42]);
+    ui->temp_bar_44->setValue(bms_temp[43]);
+    ui->temp_bar_45->setValue(bms_temp[44]);
+    ui->temp_bar_46->setValue(bms_temp[45]);
+    ui->temp_bar_47->setValue(bms_temp[46]);
+    ui->temp_bar_48->setValue(bms_temp[47]);
+    ui->temp_bar_49->setValue(bms_temp[48]);
+    ui->temp_bar_50->setValue(bms_temp[49]);
+
+    ui->temp_bar_51->setValue(bms_temp[50]);
+    ui->temp_bar_52->setValue(bms_temp[51]);
+    ui->temp_bar_53->setValue(bms_temp[52]);
+    ui->temp_bar_54->setValue(bms_temp[53]);
+    ui->temp_bar_55->setValue(bms_temp[54]);
+    ui->temp_bar_56->setValue(bms_temp[55]);
+    ui->temp_bar_57->setValue(bms_temp[56]);
+    ui->temp_bar_58->setValue(bms_temp[57]);
+    ui->temp_bar_59->setValue(bms_temp[58]);
+    ui->temp_bar_60->setValue(bms_temp[59]);
 
   //Amp Bars
 
@@ -414,38 +484,38 @@ void Dialog::SetupProgressbars(){
 
   //Volt Bars
 
-    ui->volt_bar_1->setValue(bms_volt[0]);
-    ui->volt_bar_2->setValue(bms_volt[1]);
-    ui->volt_bar_3->setValue(bms_volt[2]);
-    ui->volt_bar_4->setValue(bms_volt[3]);
-    ui->volt_bar_5->setValue(bms_volt[4]);
-    ui->volt_bar_6->setValue(bms_volt[5]);
-    ui->volt_bar_7->setValue(bms_volt[6]);
-    ui->volt_bar_8->setValue(bms_volt[7]);
-    ui->volt_bar_9->setValue(bms_volt[8]);
-    ui->volt_bar_10->setValue(bms_volt[9]);
+    ui->label_Volt_01->setText(QString::number(bms_volt[0], 'g', 4));
+    ui->label_Volt_02->setText(QString::number(bms_volt[1], 'g', 4));
+    ui->label_Volt_03->setText(QString::number(bms_volt[2], 'g', 4));
+    ui->label_Volt_04->setText(QString::number(bms_volt[3], 'g', 4));
+    ui->label_Volt_05->setText(QString::number(bms_volt[4], 'g', 4));
+    ui->label_Volt_06->setText(QString::number(bms_volt[5], 'g', 4));
+    ui->label_Volt_07->setText(QString::number(bms_volt[6], 'g', 4));
+    ui->label_Volt_08->setText(QString::number(bms_volt[7], 'g', 4));
+    ui->label_Volt_09->setText(QString::number(bms_volt[8], 'g', 4));
+    ui->label_Volt_10->setText(QString::number(bms_volt[9], 'g', 4));
 
-    ui->volt_bar_11->setValue(bms_volt[10]);
-    ui->volt_bar_12->setValue(bms_volt[11]);
-    ui->volt_bar_13->setValue(bms_volt[12]);
-    ui->volt_bar_14->setValue(bms_volt[13]);
-    ui->volt_bar_15->setValue(bms_volt[14]);
-    ui->volt_bar_16->setValue(bms_volt[15]);
-    ui->volt_bar_17->setValue(bms_volt[16]);
-    ui->volt_bar_18->setValue(bms_volt[17]);
-    ui->volt_bar_19->setValue(bms_volt[18]);
-    ui->volt_bar_20->setValue(bms_volt[19]);
+    ui->label_Volt_11->setText(QString::number(bms_volt[10], 'g', 4));
+    ui->label_Volt_12->setText(QString::number(bms_volt[11], 'g', 4));
+    ui->label_Volt_13->setText(QString::number(bms_volt[12], 'g', 4));
+    ui->label_Volt_14->setText(QString::number(bms_volt[13], 'g', 4));
+    ui->label_Volt_15->setText(QString::number(bms_volt[14], 'g', 4));
+    ui->label_Volt_16->setText(QString::number(bms_volt[15], 'g', 4));
+    ui->label_Volt_17->setText(QString::number(bms_volt[16], 'g', 4));
+    ui->label_Volt_18->setText(QString::number(bms_volt[17], 'g', 4));
+    ui->label_Volt_19->setText(QString::number(bms_volt[18], 'g', 4));
+    ui->label_Volt_20->setText(QString::number(bms_volt[19], 'g', 4));
 
-    ui->volt_bar_21->setValue(bms_volt[20]);
-    ui->volt_bar_22->setValue(bms_volt[21]);
-    ui->volt_bar_23->setValue(bms_volt[22]);
-    ui->volt_bar_24->setValue(bms_volt[23]);
-    ui->volt_bar_25->setValue(bms_volt[24]);
-    ui->volt_bar_26->setValue(bms_volt[25]);
-    ui->volt_bar_27->setValue(bms_volt[26]);
-    ui->volt_bar_28->setValue(bms_volt[27]);
-    ui->volt_bar_29->setValue(bms_volt[28]);
-    ui->volt_bar_30->setValue(bms_volt[29]);
+    ui->label_Volt_21->setText(QString::number(bms_volt[20], 'g', 4));
+    ui->label_Volt_22->setText(QString::number(bms_volt[21], 'g', 4));
+    ui->label_Volt_23->setText(QString::number(bms_volt[22], 'g', 4));
+    ui->label_Volt_24->setText(QString::number(bms_volt[23], 'g', 4));
+    ui->label_Volt_25->setText(QString::number(bms_volt[24], 'g', 4));
+    ui->label_Volt_26->setText(QString::number(bms_volt[25], 'g', 4));
+    ui->label_Volt_27->setText(QString::number(bms_volt[26], 'g', 4));
+    ui->label_Volt_28->setText(QString::number(bms_volt[27], 'g', 4));
+    ui->label_Volt_29->setText(QString::number(bms_volt[28], 'g', 4));
+    ui->label_Volt_30->setText(QString::number(bms_volt[29], 'g', 4));
 
 // Determinar estilos de las Progressbars, usando funciones
 
@@ -455,15 +525,15 @@ void Dialog::SetupProgressbars(){
 
     //Temp bars
 
-    ui->temp_bar_1->setStyleSheet(Dialog::barTempStyle(bms_temp[0]));
-    ui->temp_bar_2->setStyleSheet(Dialog::barTempStyle(bms_temp[1]));
-    ui->temp_bar_3->setStyleSheet(Dialog::barTempStyle(bms_temp[2]));
-    ui->temp_bar_4->setStyleSheet(Dialog::barTempStyle(bms_temp[3]));
-    ui->temp_bar_5->setStyleSheet(Dialog::barTempStyle(bms_temp[4]));
-    ui->temp_bar_6->setStyleSheet(Dialog::barTempStyle(bms_temp[5]));
-    ui->temp_bar_7->setStyleSheet(Dialog::barTempStyle(bms_temp[6]));
-    ui->temp_bar_8->setStyleSheet(Dialog::barTempStyle(bms_temp[7]));
-    ui->temp_bar_9->setStyleSheet(Dialog::barTempStyle(bms_temp[8]));
+    ui->temp_bar_01->setStyleSheet(Dialog::barTempStyle(bms_temp[0]));
+    ui->temp_bar_02->setStyleSheet(Dialog::barTempStyle(bms_temp[1]));
+    ui->temp_bar_03->setStyleSheet(Dialog::barTempStyle(bms_temp[2]));
+    ui->temp_bar_04->setStyleSheet(Dialog::barTempStyle(bms_temp[3]));
+    ui->temp_bar_05->setStyleSheet(Dialog::barTempStyle(bms_temp[4]));
+    ui->temp_bar_06->setStyleSheet(Dialog::barTempStyle(bms_temp[5]));
+    ui->temp_bar_07->setStyleSheet(Dialog::barTempStyle(bms_temp[6]));
+    ui->temp_bar_08->setStyleSheet(Dialog::barTempStyle(bms_temp[7]));
+    ui->temp_bar_09->setStyleSheet(Dialog::barTempStyle(bms_temp[8]));
     ui->temp_bar_10->setStyleSheet(Dialog::barTempStyle(bms_temp[9]));
     ui->temp_bar_11->setStyleSheet(Dialog::barTempStyle(bms_temp[10]));
     ui->temp_bar_12->setStyleSheet(Dialog::barTempStyle(bms_temp[11]));
@@ -485,6 +555,37 @@ void Dialog::SetupProgressbars(){
     ui->temp_bar_28->setStyleSheet(Dialog::barTempStyle(bms_temp[27]));
     ui->temp_bar_29->setStyleSheet(Dialog::barTempStyle(bms_temp[28]));
     ui->temp_bar_30->setStyleSheet(Dialog::barTempStyle(bms_temp[29]));
+    ui->temp_bar_31->setStyleSheet(Dialog::barTempStyle(bms_temp[30]));
+    ui->temp_bar_32->setStyleSheet(Dialog::barTempStyle(bms_temp[31]));
+    ui->temp_bar_33->setStyleSheet(Dialog::barTempStyle(bms_temp[32]));
+    ui->temp_bar_34->setStyleSheet(Dialog::barTempStyle(bms_temp[33]));
+    ui->temp_bar_35->setStyleSheet(Dialog::barTempStyle(bms_temp[34]));
+    ui->temp_bar_36->setStyleSheet(Dialog::barTempStyle(bms_temp[35]));
+    ui->temp_bar_37->setStyleSheet(Dialog::barTempStyle(bms_temp[36]));
+    ui->temp_bar_38->setStyleSheet(Dialog::barTempStyle(bms_temp[37]));
+    ui->temp_bar_39->setStyleSheet(Dialog::barTempStyle(bms_temp[38]));
+    ui->temp_bar_40->setStyleSheet(Dialog::barTempStyle(bms_temp[39]));
+    ui->temp_bar_41->setStyleSheet(Dialog::barTempStyle(bms_temp[40]));
+    ui->temp_bar_42->setStyleSheet(Dialog::barTempStyle(bms_temp[41]));
+    ui->temp_bar_43->setStyleSheet(Dialog::barTempStyle(bms_temp[42]));
+    ui->temp_bar_44->setStyleSheet(Dialog::barTempStyle(bms_temp[43]));
+    ui->temp_bar_45->setStyleSheet(Dialog::barTempStyle(bms_temp[44]));
+    ui->temp_bar_46->setStyleSheet(Dialog::barTempStyle(bms_temp[45]));
+    ui->temp_bar_47->setStyleSheet(Dialog::barTempStyle(bms_temp[46]));
+    ui->temp_bar_48->setStyleSheet(Dialog::barTempStyle(bms_temp[47]));
+    ui->temp_bar_49->setStyleSheet(Dialog::barTempStyle(bms_temp[48]));
+    ui->temp_bar_50->setStyleSheet(Dialog::barTempStyle(bms_temp[49]));
+    ui->temp_bar_51->setStyleSheet(Dialog::barTempStyle(bms_temp[50]));
+    ui->temp_bar_52->setStyleSheet(Dialog::barTempStyle(bms_temp[51]));
+    ui->temp_bar_53->setStyleSheet(Dialog::barTempStyle(bms_temp[52]));
+    ui->temp_bar_54->setStyleSheet(Dialog::barTempStyle(bms_temp[53]));
+    ui->temp_bar_55->setStyleSheet(Dialog::barTempStyle(bms_temp[54]));
+    ui->temp_bar_56->setStyleSheet(Dialog::barTempStyle(bms_temp[55]));
+    ui->temp_bar_57->setStyleSheet(Dialog::barTempStyle(bms_temp[56]));
+    ui->temp_bar_58->setStyleSheet(Dialog::barTempStyle(bms_temp[57]));
+    ui->temp_bar_59->setStyleSheet(Dialog::barTempStyle(bms_temp[58]));
+    ui->temp_bar_60->setStyleSheet(Dialog::barTempStyle(bms_temp[59]));
+
 
     //Amp bars
 
@@ -521,36 +622,36 @@ void Dialog::SetupProgressbars(){
 
     //Volt bars
 
-    ui->volt_bar_1->setStyleSheet(Dialog::barVoltStyle(bms_volt[0]));
-    ui->volt_bar_2->setStyleSheet(Dialog::barVoltStyle(bms_volt[1]));
-    ui->volt_bar_3->setStyleSheet(Dialog::barVoltStyle(bms_volt[2]));
-    ui->volt_bar_4->setStyleSheet(Dialog::barVoltStyle(bms_volt[3]));
-    ui->volt_bar_5->setStyleSheet(Dialog::barVoltStyle(bms_volt[4]));
-    ui->volt_bar_6->setStyleSheet(Dialog::barVoltStyle(bms_volt[5]));
-    ui->volt_bar_7->setStyleSheet(Dialog::barVoltStyle(bms_volt[6]));
-    ui->volt_bar_8->setStyleSheet(Dialog::barVoltStyle(bms_volt[7]));
-    ui->volt_bar_9->setStyleSheet(Dialog::barVoltStyle(bms_volt[8]));
-    ui->volt_bar_10->setStyleSheet(Dialog::barVoltStyle(bms_volt[9]));
-    ui->volt_bar_11->setStyleSheet(Dialog::barVoltStyle(bms_volt[10]));
-    ui->volt_bar_12->setStyleSheet(Dialog::barVoltStyle(bms_volt[11]));
-    ui->volt_bar_13->setStyleSheet(Dialog::barVoltStyle(bms_volt[12]));
-    ui->volt_bar_14->setStyleSheet(Dialog::barVoltStyle(bms_volt[13]));
-    ui->volt_bar_15->setStyleSheet(Dialog::barVoltStyle(bms_volt[14]));
-    ui->volt_bar_16->setStyleSheet(Dialog::barVoltStyle(bms_volt[15]));
-    ui->volt_bar_17->setStyleSheet(Dialog::barVoltStyle(bms_volt[16]));
-    ui->volt_bar_18->setStyleSheet(Dialog::barVoltStyle(bms_volt[17]));
-    ui->volt_bar_19->setStyleSheet(Dialog::barVoltStyle(bms_volt[18]));
-    ui->volt_bar_20->setStyleSheet(Dialog::barVoltStyle(bms_volt[19]));
-    ui->volt_bar_21->setStyleSheet(Dialog::barVoltStyle(bms_volt[20]));
-    ui->volt_bar_22->setStyleSheet(Dialog::barVoltStyle(bms_volt[21]));
-    ui->volt_bar_23->setStyleSheet(Dialog::barVoltStyle(bms_volt[22]));
-    ui->volt_bar_24->setStyleSheet(Dialog::barVoltStyle(bms_volt[23]));
-    ui->volt_bar_25->setStyleSheet(Dialog::barVoltStyle(bms_volt[24]));
-    ui->volt_bar_26->setStyleSheet(Dialog::barVoltStyle(bms_volt[25]));
-    ui->volt_bar_27->setStyleSheet(Dialog::barVoltStyle(bms_volt[26]));
-    ui->volt_bar_28->setStyleSheet(Dialog::barVoltStyle(bms_volt[27]));
-    ui->volt_bar_29->setStyleSheet(Dialog::barVoltStyle(bms_volt[28]));
-    ui->volt_bar_30->setStyleSheet(Dialog::barVoltStyle(bms_volt[29]));
+    ui->label_Volt_01->setStyleSheet(Dialog::barVoltStyle(bms_volt[0]));
+    ui->label_Volt_02->setStyleSheet(Dialog::barVoltStyle(bms_volt[1]));
+    ui->label_Volt_03->setStyleSheet(Dialog::barVoltStyle(bms_volt[2]));
+    ui->label_Volt_04->setStyleSheet(Dialog::barVoltStyle(bms_volt[3]));
+    ui->label_Volt_05->setStyleSheet(Dialog::barVoltStyle(bms_volt[4]));
+    ui->label_Volt_06->setStyleSheet(Dialog::barVoltStyle(bms_volt[5]));
+    ui->label_Volt_07->setStyleSheet(Dialog::barVoltStyle(bms_volt[6]));
+    ui->label_Volt_08->setStyleSheet(Dialog::barVoltStyle(bms_volt[7]));
+    ui->label_Volt_09->setStyleSheet(Dialog::barVoltStyle(bms_volt[8]));
+    ui->label_Volt_10->setStyleSheet(Dialog::barVoltStyle(bms_volt[9]));
+    ui->label_Volt_11->setStyleSheet(Dialog::barVoltStyle(bms_volt[10]));
+    ui->label_Volt_12->setStyleSheet(Dialog::barVoltStyle(bms_volt[11]));
+    ui->label_Volt_13->setStyleSheet(Dialog::barVoltStyle(bms_volt[12]));
+    ui->label_Volt_14->setStyleSheet(Dialog::barVoltStyle(bms_volt[13]));
+    ui->label_Volt_15->setStyleSheet(Dialog::barVoltStyle(bms_volt[14]));
+    ui->label_Volt_16->setStyleSheet(Dialog::barVoltStyle(bms_volt[15]));
+    ui->label_Volt_17->setStyleSheet(Dialog::barVoltStyle(bms_volt[16]));
+    ui->label_Volt_18->setStyleSheet(Dialog::barVoltStyle(bms_volt[17]));
+    ui->label_Volt_19->setStyleSheet(Dialog::barVoltStyle(bms_volt[18]));
+    ui->label_Volt_20->setStyleSheet(Dialog::barVoltStyle(bms_volt[19]));
+    ui->label_Volt_21->setStyleSheet(Dialog::barVoltStyle(bms_volt[20]));
+    ui->label_Volt_22->setStyleSheet(Dialog::barVoltStyle(bms_volt[21]));
+    ui->label_Volt_23->setStyleSheet(Dialog::barVoltStyle(bms_volt[22]));
+    ui->label_Volt_24->setStyleSheet(Dialog::barVoltStyle(bms_volt[23]));
+    ui->label_Volt_25->setStyleSheet(Dialog::barVoltStyle(bms_volt[24]));
+    ui->label_Volt_26->setStyleSheet(Dialog::barVoltStyle(bms_volt[25]));
+    ui->label_Volt_27->setStyleSheet(Dialog::barVoltStyle(bms_volt[26]));
+    ui->label_Volt_28->setStyleSheet(Dialog::barVoltStyle(bms_volt[27]));
+    ui->label_Volt_29->setStyleSheet(Dialog::barVoltStyle(bms_volt[28]));
+    ui->label_Volt_30->setStyleSheet(Dialog::barVoltStyle(bms_volt[29]));
 }
 
 void Dialog::SetupSpeedometer(){
@@ -730,7 +831,7 @@ void Dialog::SetupArduino(){
             qDebug() << "Found the arduino port...\n";
             arduino->setPortName(arduino_uno_port_name);
             arduino->open(QSerialPort::ReadOnly);
-            arduino->setBaudRate(QSerialPort::Baud9600);
+            arduino->setBaudRate(QSerialPort::Baud115200);
             arduino->setDataBits(QSerialPort::Data8);
             arduino->setFlowControl(QSerialPort::NoFlowControl);
             arduino->setParity(QSerialPort::NoParity);
