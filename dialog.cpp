@@ -41,10 +41,10 @@ Dialog::Dialog(QWidget *parent) :
 //  Dialog::GetProductVendorID();
     //double v1 = 2.956;
     //for(int i = 0; i < 30; i++){ bms_volt[i] = v1; v1 += 0.123;}
-    bms_temp[0] = 50.5;
-    bms_temp[1] = 70.3;
-    bms_temp[2] = 10.9;
-    bms_temp[3] = 40.7;
+//    bms_temp[0] = 50.5;
+//    bms_temp[1] = 70.3;
+//    bms_temp[2] = 10.9;
+//    bms_temp[3] = 40.7;
 
     Dialog::SetupArduino();
     Dialog::SetupPlots();
@@ -199,8 +199,9 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
             bms_volt[posicion] = value*0.0001;
 
         } else if (name == "TEMP"){
-            qDebug() << "CELL INST VOLTAGE [" << posicion << "]: " << valor;
+            qDebug() << "TEMP[" << posicion << "]: " << valor;
             bms_temp[posicion] = value;
+            ui->temp_bar_60->setValue(400);
 
         } else if (name == "I1_A"){
             qDebug() << "CORRIENTE A MOTOR 1: " << valor;
@@ -389,13 +390,13 @@ void Dialog::maximavelocidad(){
 
 }
 QString Dialog::barTempStyle(double value){
-    if ((value >=0)&&(value <25)){
+    if ((value >=10)&&(value <20)){
         return safe;
-    } else if ((value >=25)&&(value <50)){
+    } else if ((value >=20)&&(value <25)){
         return safe1;
-    } else if ((value >=50)&&(value <75)){
+    } else if ((value >=25)&&(value <30)){
         return danger;
-    } else if ((value >=75)&&(value <=100)){
+    } else if ((value >=30)&&(value <=35)){
         return danger1;
     }
     return danger1;

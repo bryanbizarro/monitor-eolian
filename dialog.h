@@ -40,13 +40,13 @@ private slots:
 private:
     Ui::Dialog *ui;
     QSerialPort *arduino;
-    static const quint16 arduino_uno_vendor_id = 9025;      // Arduino:9025 |Xbee:1027 | Arduino(?): 2341
-    static const quint16 arduino_uno_product_id = 67;       // Arduino:67   |Xbee:24577| Arduino(?): 0043
+    static const quint16 arduino_uno_vendor_id = 1027;      // Arduino:9025 |Xbee:1027 | Arduino(?): 2341
+    static const quint16 arduino_uno_product_id = 24577;       // Arduino:67   |Xbee:24577| Arduino(?): 0043
     QByteArray serialData;
     QString serialBuffer;
     QString parsed_data;
 
-    double bms_temp[30];
+    double bms_temp[60];
     double bms_volt[30];
     double bms_amp[30];
 
@@ -63,7 +63,7 @@ private:
     QcGaugeWidget * mSpeedGauge;
     QcNeedleItem *mSpeedNeedle;
 
-    double carga_restante=87;
+    double carga_restante;
 
     QString safe    = "QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #29D600,stop: 0.4999 #68d600,stop: 0.5 #68d600,stop: 1 #93d600 );border-top-left-radius: 3px ;border-top-right-radius: 3px;border-bottom-right-radius: 3px ;border-bottom-left-radius: 3px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 3px ;border-top-right-radius: 3px;border-bottom-right-radius: 3px ;border-bottom-left-radius: 3px;font: 75 10pt;}";
     QString safe1   = "QProgressBar::chunk {background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,stop: 0 #93d600,stop: 0.4999 #ecee00,stop: 0.5 #ecee00,stop: 1 #f0ff00 );border-top-left-radius: 3px ;border-top-right-radius: 3px;border-bottom-right-radius: 3px ;border-bottom-left-radius: 3px; border: 0px solid black;}QProgressBar{border: 0px;background: white; padding: 1px; text-align: center;border-top-left-radius: 3px ;border-top-right-radius: 3px;border-bottom-right-radius: 3px ;border-bottom-left-radius: 3px;font: 75 10pt;}";
