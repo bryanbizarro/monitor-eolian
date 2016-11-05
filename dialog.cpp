@@ -23,7 +23,7 @@ Dialog::Dialog(QWidget *parent) :
     ui->lcd_mppt_1_uout->display("----");
     ui->lcd_mppt_2_uout->display("----");
     //ui->lcd_velocidad->display("----");
-    ui->lcd_torque->display("----");
+    //ui->lcd_torque->display("----");
     ui->lcd_gap->display("----");
     //ui->lcd_max_voltaje->display("----");
     //ui->lcd_min_voltaje->display("----");
@@ -39,8 +39,8 @@ Dialog::Dialog(QWidget *parent) :
     parsed_data = "";
 
 //  Dialog::GetProductVendorID();
-    double v1 = 2.956;
-    for(int i = 0; i < 30; i++){ bms_volt[i] = v1; v1 += 0.123;}
+    //double v1 = 2.956;
+    //for(int i = 0; i < 30; i++){ bms_volt[i] = v1; v1 += 0.123;}
     bms_temp[0] = 50.5;
     bms_temp[1] = 70.3;
     bms_temp[2] = 10.9;
@@ -108,8 +108,8 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
             qDebug() << "Corriente: " << posicion << ": " << valor;
             amperaje1 = value;
             ui->lcd_packAmp->display(parsed_data);
-            ui->lcd_mppt_1_iin->display(parsed_data);
-            ui->lcd_mppt_2_iin->display(parsed_data);
+            //ui->lcd_mppt_1_iin->display(parsed_data);
+            //ui->lcd_mppt_2_iin->display(parsed_data);
 
         } else if (name == "PACK_CURRENT") {
             qDebug() << "PACK CURRENT:  " << posicion << ": " << valor;
@@ -167,36 +167,32 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
             qDebug() << "INTERNAL TEMPERATURE: " << posicion << ": " << valor;
             ui->lcd_internalTemperature->display(parsed_data);
 
-        } else if (name == "PACK_DCL"){
-            qDebug() << "PACK DCL [" << posicion << "]: " << valor;
-            //bms_temp[posicion-1] = valor.toDouble();
-            //ui->lcd_DCL->display(parsed_data);
+//        } else if (name == "PACK_DCL"){
+//            qDebug() << "PACK DCL [" << posicion << "]: " << valor;
+//            //bms_temp[posicion-1] = valor.toDouble();
+//            //ui->lcd_DCL->display(parsed_data);
 
-        } else if (name == "PACK_CCL"){
-            qDebug() << "PACK CCL [" << posicion << "]: " << valor;
-            //bms_amp[posicion-1] = valor.toDouble();
-            //ui->lcd_CCL->display(parsed_data);
+//        } else if (name == "PACK_CCL"){
+//            qDebug() << "PACK CCL [" << posicion << "]: " << valor;
+//            //bms_amp[posicion-1] = valor.toDouble();
+//            //ui->lcd_CCL->display(parsed_data);
 
-        } else if (name == "REL_STATE"){
-            qDebug() << "RELAY STATE [" << posicion << "]: " << valor;
-            //bms_volt[posicion-1] = valor.toDouble();
-            ui->lcd_relayState->display(parsed_data);
+//        } else if (name == "REL_STATE"){
+//            qDebug() << "RELAY STATE [" << posicion << "]: " << valor;
+//            //bms_volt[posicion-1] = valor.toDouble();
+//            ui->lcd_relayState->display(parsed_data);
 
-        } else if (name == "PACK_SOC"){
-            qDebug() << "PACK SOC [" << posicion << "]: " << valor;
-            ui->lcd_packSOC->display(parsed_data);
+//        } else if (name == "PACK_SOC"){
+//            qDebug() << "PACK SOC [" << posicion << "]: " << valor;
+//            ui->lcd_packSOC->display(parsed_data);
 
-        } else if (name == "PACK_RES"){
-            qDebug() << "PACK RESISTANCE [" << posicion << "]: " << valor;
-            //ui->lcd_packResistance->display(parsed_data);
+//        } else if (name == "PACK_RES"){
+//            qDebug() << "PACK RESISTANCE [" << posicion << "]: " << valor;
+//            //ui->lcd_packResistance->display(parsed_data);
 
-        } else if (name == "PACK_OPENVTG"){
-            qDebug() << "PACK OPEN VOLTAJE [" << posicion << "]: " << valor;
-            ui->lcd_openVolt->display(parsed_data);
-
-        } else if (name == "PACK_AMPH"){
-            qDebug() << "PACK AMPHOURS [" << posicion << "]: " << valor;
-            ui->lcd_relayState->display(parsed_data);
+//        } else if (name == "PACK_AMPH"){
+//            qDebug() << "PACK AMPHOURS [" << posicion << "]: " << valor;
+//            ui->lcd_relayState->display(parsed_data);
 
         } else if (name == "CELL_INSTVTG"){
             qDebug() << "CELL INST VOLTAGE [" << posicion << "]: " << valor;
@@ -205,6 +201,76 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
         } else if (name == "TEMP"){
             qDebug() << "CELL INST VOLTAGE [" << posicion << "]: " << valor;
             bms_temp[posicion] = value;
+
+        } else if (name == "I1_A"){
+            qDebug() << "CORRIENTE A MOTOR 1: " << valor;
+            ui->lcd_eng1_IA->display(parsed_data);
+
+        } else if (name == "I1_B"){
+            qDebug() << "CORRIENTE B MOTOR 1: " << valor;
+            ui->lcd_eng1_IB->display(parsed_data);
+
+        } else if (name == "I1_C"){
+            qDebug() << "CORRIENTE C MOTOR 1: " << valor;
+            ui->lcd_eng1_IC->display(parsed_data);
+
+        } else if (name == "I2_A"){
+            qDebug() << "CORRIENTE A MOTOR 2: " << valor;
+            ui->lcd_eng2_IA->display(parsed_data);
+
+        } else if (name == "I2_B"){
+            qDebug() << "CORRIENTE B MOTOR 2: " << valor;
+            ui->lcd_eng2_IB->display(parsed_data);
+
+        } else if (name == "I2_C"){
+            qDebug() << "CORRIENTE C MOTOR 2: " << valor;
+            ui->lcd_eng2_IC->display(parsed_data);
+
+        } else if (name == "ENGA"){
+            qDebug() << "RPM MOTOR 1: " << valor;
+            value = value*538*108/1000;
+            parsed_data = QString::number(value, 'g', 4);
+            ui->lcd_velocidad->display(parsed_data);
+
+        } else if (name == "ENGB"){
+            qDebug() << "RPM MOTOR 2: " << valor;
+            value = value*538*108/1000;
+            parsed_data = QString::number(value, 'g', 4);
+            ui->lcd_velocidad->display(parsed_data);
+
+        } else if (name == "ENG1_TEMP"){
+            qDebug() << "TEMP MOTOR 1: " << valor;
+            ui->lcd_eng1Temp->display(parsed_data);
+
+        } else if (name == "ENG2_TEMP"){
+            qDebug() << "TEMP MOTOR 2: " << valor;
+            ui->lcd_eng2Temp->display(parsed_data);
+
+        } else if (name == "MPPT1_UIN"){
+            qDebug() << "MPPT 1 UIN: " << valor;
+            ui->lcd_mppt_1_uin->display(parsed_data);
+
+        } else if (name == "MPPT1_IIN"){
+            qDebug() << "MPPT 1 ININ: " << valor;
+            amperaje1 = value;
+            ui->lcd_mppt_1_iin->display(parsed_data);
+
+        } else if (name == "MPPT1_UOUT"){
+            qDebug() << "MPPT 1 UOUT: " << valor;
+            ui->lcd_mppt_1_uout->display(parsed_data);
+
+        } else if (name == "MPPT2_UIN"){
+            qDebug() << "MPPT 2 UIN: " << valor;
+            ui->lcd_mppt_2_uin->display(parsed_data);
+
+        } else if (name == "MPPT2_IIN"){
+            qDebug() << "MPPT 2 ININ: " << valor;
+            amperaje2 = value;
+            ui->lcd_mppt_2_iin->display(parsed_data);
+
+        } else if (name == "MPPT2_UOUT"){
+            qDebug() << "MPPT 2 UOUT: " << valor;
+            ui->lcd_mppt_2_uout->display(parsed_data);
 
         } else {
             qDebug() << "SERIAL READ ERROR";
@@ -831,7 +897,7 @@ void Dialog::SetupArduino(){
             qDebug() << "Found the arduino port...\n";
             arduino->setPortName(arduino_uno_port_name);
             arduino->open(QSerialPort::ReadOnly);
-            arduino->setBaudRate(QSerialPort::Baud115200);
+            arduino->setBaudRate(QSerialPort::Baud57600);
             arduino->setDataBits(QSerialPort::Data8);
             arduino->setFlowControl(QSerialPort::NoFlowControl);
             arduino->setParity(QSerialPort::NoParity);
