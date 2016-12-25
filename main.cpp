@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
 
 
-    w.setWindowTitle("Interfaz Eolian");
+    w.setWindowTitle("Eolian Fenix");
     w.show();
 
     return a.exec();
