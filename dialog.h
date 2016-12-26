@@ -40,8 +40,8 @@ private slots:
 private:
     Ui::Dialog *ui;
     QSerialPort *arduino;
-    static const quint16 arduino_uno_vendor_id = 1027;      // Arduino:9025 |Xbee:1027 | Arduino(?): 2341
-    static const quint16 arduino_uno_product_id = 24577;       // Arduino:67   |Xbee:24577| Arduino(?): 0043
+    static const quint16 arduino_uno_vendor_id = 9025;      // Arduino:9025 |Xbee:1027 | Arduino(?): 2341
+    static const quint16 arduino_uno_product_id = 67;       // Arduino:67   |Xbee:24577| Arduino(?): 0043
     QByteArray serialData;
     QString serialBuffer;
     QString parsed_data;

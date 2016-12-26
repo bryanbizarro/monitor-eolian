@@ -77,7 +77,7 @@ void Dialog::readSerial(){
     //  means there is a parsed temperature value as the second token (between 2 commas)
     if(buffer_split.length() < 2 ){
         // no parsed value yet so continue accumulating bytes from serial in the buffer.
-        serialData = arduino->readLine();
+        serialData = arduino->readAll();
         serialBuffer = serialBuffer + QString::fromStdString(serialData.toStdString());
         serialData.clear();
     }else{
