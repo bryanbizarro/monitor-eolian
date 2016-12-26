@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QDateTime>
 #include <QtGlobal>
+#include <QChar>
 
 //Display inicial, valores iniciales, detecta Arduino (no modificar), define parámetros Arduino//
 
@@ -94,7 +95,7 @@ void Dialog::readSerial(){
             if (unDato.length()==2){
             Dialog::updateValues(unDato[0],unDato[1]);
             } else if (unDato.length()==3){
-            Dialog::updateValues(unDato[0],unDato[2], unDato[1].toInt());
+            Dialog::updateValues(unDato[0], unDato[2], unDato[1].toInt());
             }
         }
     }
@@ -102,8 +103,13 @@ void Dialog::readSerial(){
 }
 void Dialog::updateValues(QString name, QString valor, int posicion){
     double value;
+
+    QChar ch = valor.at(0).toLatin1();
+    int chValue =  ch.toLatin1();
+
+
     try{
-        value = valor.toDouble();
+        value = (double)chValue;
     }
     catch(...){
         value = 0;
@@ -116,7 +122,7 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
                 bms_volt[posicion] = value*0.0001;
             }
 
-        } else if (name == "PACK_CURRENT") {
+        } else if (name == "A") {
             //qDebug() << "PACK CURRENT:  " << posicion << ": " << valor;
             ui->lcd_packAmp->display(parsed_data);
 
