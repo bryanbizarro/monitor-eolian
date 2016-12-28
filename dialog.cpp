@@ -73,7 +73,7 @@ void Dialog::readSerial(){
     //  Check to see if there less than 3 tokens in buffer_split.
     //  If there are at least 3 then this means there were 2 commas,
     //  means there is a parsed temperature value as the second token (between 2 commas)
-    if(buffer_split.length() <8 ){
+    if(buffer_split.length() <2 ){
         // no parsed value yet so continue accumulating bytes from serial in the buffer.
         serialData = arduino->readAll();
         serialBuffer = serialBuffer + QString::fromStdString(serialData.toStdString());
@@ -99,37 +99,18 @@ void Dialog::readSerial(){
 
 }
 void Dialog::updateValues(QString name, QString valor, int posicion){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     double value;
 
-    QChar ch = valor.at(0).toLatin1();
-    int chValue =  ch.toLatin1();
-
-
     try{
-        value = (double)chValue;
+        value = valor.toDouble();
     }
     catch(...){
         value = 0;
     }
-=======
-=======
->>>>>>> parent of 5a6ae89... Add new variables
-=======
->>>>>>> parent of 5a6ae89... Add new variables
 
-    if(double value = valor.toDouble()){
         qDebug() << value;
         qDebug() << posicion;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 5a6ae89... Add new variables
-=======
->>>>>>> parent of 5a6ae89... Add new variables
-=======
->>>>>>> parent of 5a6ae89... Add new variables
+
         parsed_data = QString::number(value, 'g', 4); // format precision of temperature_value to 4 digits or fewer
 
         if(name == "CURRENT"){
@@ -139,23 +120,9 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
             //ui->lcd_mppt_1_iin->display(parsed_data);
             //ui->lcd_mppt_2_iin->display(parsed_data);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         } else if (name == "A") {
-            //qDebug() << "PACK CURRENT:  " << posicion << ": " << valor;
-=======
-        } else if (name == "PACK_CURRENT") {
             qDebug() << "PACK CURRENT:  " << posicion << ": " << valor;
->>>>>>> parent of 5a6ae89... Add new variables
-=======
-        } else if (name == "PACK_CURRENT") {
-            qDebug() << "PACK CURRENT:  " << posicion << ": " << valor;
->>>>>>> parent of 5a6ae89... Add new variables
-=======
-        } else if (name == "PACK_CURRENT") {
-            qDebug() << "PACK CURRENT:  " << posicion << ": " << valor;
->>>>>>> parent of 5a6ae89... Add new variables
+
             ui->lcd_packAmp->display(parsed_data);
 
 
@@ -275,8 +242,6 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
             value = value*538*108/1000;
             parsed_data = QString::number(value, 'g', 4);
             ui->lcd_velocidad->display(parsed_data);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         } else if (name == "ENGB"){
             qDebug() << "RPM MOTOR 2: " << valor;
@@ -284,7 +249,13 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
             parsed_data = QString::number(value, 'g', 4);
             ui->lcd_velocidad->display(parsed_data);
 
-=======
+        } else if (name == "ENGB"){
+            qDebug() << "RPM MOTOR 2: " << valor;
+            value = value*538*108/1000;
+            parsed_data = QString::number(value, 'g', 4);
+            ui->lcd_velocidad->display(parsed_data);
+
+
 
         } else if (name == "ENGB"){
             qDebug() << "RPM MOTOR 2: " << valor;
@@ -292,16 +263,7 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
             parsed_data = QString::number(value, 'g', 4);
             ui->lcd_velocidad->display(parsed_data);
 
->>>>>>> parent of 5a6ae89... Add new variables
-=======
 
-        } else if (name == "ENGB"){
-            qDebug() << "RPM MOTOR 2: " << valor;
-            value = value*538*108/1000;
-            parsed_data = QString::number(value, 'g', 4);
-            ui->lcd_velocidad->display(parsed_data);
-
->>>>>>> parent of 5a6ae89... Add new variables
         } else if (name == "ENG1_TEMP"){
             qDebug() << "TEMP MOTOR 1: " << valor;
             ui->lcd_eng1Temp->display(parsed_data);
@@ -339,7 +301,7 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
         } else {
             qDebug() << "SERIAL READ ERROR";
 
-        }
+
     }
 
     Dialog::makeplot();
