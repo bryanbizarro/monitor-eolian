@@ -101,6 +101,7 @@ void Dialog::readSerial(){
 void Dialog::updateValues(QString name, QString valor, int posicion){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     double value;
 
     QChar ch = valor.at(0).toLatin1();
@@ -116,11 +117,16 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
 =======
 =======
 >>>>>>> parent of 5a6ae89... Add new variables
+=======
+>>>>>>> parent of 5a6ae89... Add new variables
 
     if(double value = valor.toDouble()){
         qDebug() << value;
         qDebug() << posicion;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 5a6ae89... Add new variables
+=======
 >>>>>>> parent of 5a6ae89... Add new variables
 =======
 >>>>>>> parent of 5a6ae89... Add new variables
@@ -135,8 +141,13 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         } else if (name == "A") {
             //qDebug() << "PACK CURRENT:  " << posicion << ": " << valor;
+=======
+        } else if (name == "PACK_CURRENT") {
+            qDebug() << "PACK CURRENT:  " << posicion << ": " << valor;
+>>>>>>> parent of 5a6ae89... Add new variables
 =======
         } else if (name == "PACK_CURRENT") {
             qDebug() << "PACK CURRENT:  " << posicion << ": " << valor;
@@ -265,6 +276,7 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
             parsed_data = QString::number(value, 'g', 4);
             ui->lcd_velocidad->display(parsed_data);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         } else if (name == "ENGB"){
             qDebug() << "RPM MOTOR 2: " << valor;
@@ -272,6 +284,15 @@ void Dialog::updateValues(QString name, QString valor, int posicion){
             parsed_data = QString::number(value, 'g', 4);
             ui->lcd_velocidad->display(parsed_data);
 
+=======
+
+        } else if (name == "ENGB"){
+            qDebug() << "RPM MOTOR 2: " << valor;
+            value = value*538*108/1000;
+            parsed_data = QString::number(value, 'g', 4);
+            ui->lcd_velocidad->display(parsed_data);
+
+>>>>>>> parent of 5a6ae89... Add new variables
 =======
 
         } else if (name == "ENGB"){
