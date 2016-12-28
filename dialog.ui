@@ -775,6 +775,336 @@ color: rgb(255, 255, 255);</string>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
+   <widget class="QScrollArea" name="mppt_scroll">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>430</y>
+      <width>380</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: none;
+background-repeat: none;
+background-color: #FFFFFF;
+font-family: &quot;Roboto&quot;;
+
+</string>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>363</width>
+       <height>162</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="7" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Temperatura</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLCDNumber" name="lcd_mppt_2_uin">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: ;
+
+color: rgb(255, 0, 0);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+        </property>
+        <property name="text">
+         <string>Uout</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLCDNumber" name="lcd_mppt_1_uin">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: ;
+color: rgb(85, 0, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLCDNumber" name="lcd_mppt_1_iin">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: ;
+color: rgb(85, 0, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLCDNumber" name="lcd_mppt_2_iin">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: ;
+
+color: rgb(255, 0, 0);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLCDNumber" name="lcd_mppt_1_uout">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: none;
+color: rgb(0, 0, 0);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLCDNumber" name="lcd_mppt_2_uout"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;
+text-align: center;
+color: blue;
+padding: 2px auto;</string>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_6">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+        </property>
+        <property name="text">
+         <string>Iin</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;
+padding: 2px auto;
+color: red;</string>
+        </property>
+        <property name="text">
+         <string>2</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLCDNumber" name="lcd_mppt_temp_amb">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);
+background: ;
+border: none;
+background-repeat: none;
+color: rgb(0, 0, 0);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="label_20">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+        </property>
+        <property name="text">
+         <string>Máx Voltaje</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" rowspan="2" colspan="4">
+       <widget class="Line" name="line">
+        <property name="styleSheet">
+         <string notr="true">background-color: #000000;
+border: 0px none white;
+margin: 0;
+padding: 0;</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="2">
+       <widget class="QLabel" name="label_21">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+        </property>
+        <property name="text">
+         <string>Mín Voltaje</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="1">
+       <widget class="QLCDNumber" name="lcd_minVtg"/>
+      </item>
+      <item row="10" column="3">
+       <widget class="QLCDNumber" name="lcd_maxVtg"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_5">
+        <property name="font">
+         <font>
+          <family>Roboto</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;</string>
+        </property>
+        <property name="text">
+         <string>Uin</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="mppt_stats_tittle">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>390</y>
+      <width>380</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto</family>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #FFF;
+border: none;</string>
+    </property>
+    <property name="text">
+     <string>MPPT</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
@@ -838,188 +1168,170 @@ QProgressBar{
      <string>%p%</string>
     </property>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>10</y>
-      <width>291</width>
-      <height>251</height>
+      <x>10</x>
+      <y>310</y>
+      <width>361</width>
+      <height>83</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="layout_velocimetro"/>
-   </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget_2">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>340</y>
-      <width>381</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_7">
+      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="bottomMargin">
+        <number>2</number>
+       </property>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,0">
-         <property name="spacing">
-          <number>6</number>
+        <widget class="QLCDNumber" name="lcd_velocidad">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
          </property>
-         <property name="leftMargin">
-          <number>0</number>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>48</pointsize>
+          </font>
          </property>
-         <property name="topMargin">
-          <number>2</number>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
          </property>
-         <property name="bottomMargin">
-          <number>2</number>
-         </property>
-         <item>
-          <widget class="QLCDNumber" name="lcd_rpm1">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Roboto</family>
-             <pointsize>48</pointsize>
-            </font>
-           </property>
-           <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background: transparent;
+         <property name="styleSheet">
+          <string notr="true">background: transparent;
 border: none;
 background-repeat: none;
 color:rgb(232, 232, 232);</string>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::StyledPanel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Raised</enum>
-           </property>
-           <property name="smallDecimalPoint">
-            <bool>false</bool>
-           </property>
-           <property name="digitCount">
-            <number>4</number>
-           </property>
-           <property name="mode">
-            <enum>QLCDNumber::Dec</enum>
-           </property>
-           <property name="intValue" stdset="0">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_38">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Roboto</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: transparent;
-background: none;
-border: none;
-background-repeat: none;
-color: #FFF;</string>
-           </property>
-           <property name="text">
-            <string>RPM</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="digitCount">
+          <number>2</number>
+         </property>
+         <property name="mode">
+          <enum>QLCDNumber::Dec</enum>
+         </property>
+         <property name="intValue" stdset="0">
+          <number>80</number>
+         </property>
+        </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_8">
-         <item>
-          <widget class="QLCDNumber" name="lcd_engTemp1">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background: transparent;
-border: none;
-background-repeat: none;
-color:rgb(232, 232, 232);</string>
-           </property>
-           <property name="digitCount">
-            <number>3</number>
-           </property>
-           <property name="value" stdset="0">
-            <double>0.000000000000000</double>
-           </property>
-           <property name="intValue" stdset="0">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_39">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Roboto</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: transparent;
+        <widget class="QLabel" name="label_3">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
 background: none;
 border: none;
 background-repeat: none;
 color: #FFF;</string>
-           </property>
-           <property name="text">
-            <string notr="true">TEMPERATURA</string>
-           </property>
-           <property name="scaledContents">
-            <bool>false</bool>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
+         </property>
+         <property name="text">
+          <string>VELOCIDAD</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_9">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
        <item>
-        <widget class="QLCDNumber" name="lcd_velocidad">
+        <widget class="QLCDNumber" name="lcd_gap">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background: transparent;
+border: none;
+background-repeat: none;
+color:rgb(232, 232, 232);</string>
+         </property>
+         <property name="digitCount">
+          <number>1</number>
+         </property>
+         <property name="intValue" stdset="0">
+          <number>3</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: transparent;
+background: none;
+border: none;
+background-repeat: none;
+color: #FFF;</string>
+         </property>
+         <property name="text">
+          <string notr="true">GAP</string>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLCDNumber" name="lcd_max_speed">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -1059,15 +1371,15 @@ border:  none;
           <enum>QLCDNumber::Filled</enum>
          </property>
          <property name="value" stdset="0">
-          <double>0.000000000000000</double>
+          <double>91.000000000000000</double>
          </property>
          <property name="intValue" stdset="0">
-          <number>0</number>
+          <number>91</number>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_40">
+        <widget class="QLabel" name="label">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -1087,7 +1399,7 @@ border:  none;
 background: transparent;</string>
          </property>
          <property name="text">
-          <string>VELOCIDAD</string>
+          <string>VEL. MÁX.</string>
          </property>
          <property name="textFormat">
           <enum>Qt::AutoText</enum>
@@ -1099,323 +1411,18 @@ background: transparent;</string>
        </item>
       </layout>
      </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_11">
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_12" stretch="0,0">
-         <property name="spacing">
-          <number>6</number>
-         </property>
-         <property name="leftMargin">
-          <number>0</number>
-         </property>
-         <property name="topMargin">
-          <number>2</number>
-         </property>
-         <property name="bottomMargin">
-          <number>2</number>
-         </property>
-         <item>
-          <widget class="QLCDNumber" name="lcd_rpm2">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Roboto</family>
-             <pointsize>48</pointsize>
-            </font>
-           </property>
-           <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background: transparent;
-border: none;
-background-repeat: none;
-color:rgb(232, 232, 232);</string>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::StyledPanel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Raised</enum>
-           </property>
-           <property name="smallDecimalPoint">
-            <bool>false</bool>
-           </property>
-           <property name="digitCount">
-            <number>4</number>
-           </property>
-           <property name="mode">
-            <enum>QLCDNumber::Dec</enum>
-           </property>
-           <property name="value" stdset="0">
-            <double>0.000000000000000</double>
-           </property>
-           <property name="intValue" stdset="0">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_41">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Roboto</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: transparent;
-background: none;
-border: none;
-background-repeat: none;
-color: #FFF;</string>
-           </property>
-           <property name="text">
-            <string>RPM</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_13">
-         <item>
-          <widget class="QLCDNumber" name="lcd_engTemp2">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background: transparent;
-border: none;
-background-repeat: none;
-color:rgb(232, 232, 232);</string>
-           </property>
-           <property name="digitCount">
-            <number>3</number>
-           </property>
-           <property name="value" stdset="0">
-            <double>0.000000000000000</double>
-           </property>
-           <property name="intValue" stdset="0">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_42">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>20</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <family>Roboto</family>
-             <pointsize>12</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">background-color: transparent;
-background: none;
-border: none;
-background-repeat: none;
-color: #FFF;</string>
-           </property>
-           <property name="text">
-            <string notr="true">TEMPERATURA</string>
-           </property>
-           <property name="scaledContents">
-            <bool>false</bool>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget_3">
+   <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>480</y>
-      <width>381</width>
-      <height>80</height>
+      <x>50</x>
+      <y>10</y>
+      <width>291</width>
+      <height>251</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_14">
-       <item>
-        <widget class="QLabel" name="error_motor1">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>20</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Roboto</family>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: transparent;
-background: none;
-border: none;
-background-repeat: none;
-color: #FFF;</string>
-         </property>
-         <property name="text">
-          <string notr="true">S/I</string>
-         </property>
-         <property name="scaledContents">
-          <bool>false</bool>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_43">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>20</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Roboto</family>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: transparent;
-background: none;
-border: none;
-background-repeat: none;
-color: #FFF;</string>
-         </property>
-         <property name="text">
-          <string notr="true">ERROR</string>
-         </property>
-         <property name="scaledContents">
-          <bool>false</bool>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_15">
-       <item>
-        <widget class="QLabel" name="error_motor2">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>20</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Roboto</family>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: transparent;
-background: none;
-border: none;
-background-repeat: none;
-color: #FFF;</string>
-         </property>
-         <property name="text">
-          <string notr="true">S/I</string>
-         </property>
-         <property name="scaledContents">
-          <bool>false</bool>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_44">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>20</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Roboto</family>
-           <pointsize>12</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: transparent;
-background: none;
-border: none;
-background-repeat: none;
-color: #FFF;</string>
-         </property>
-         <property name="text">
-          <string notr="true">ERROR</string>
-         </property>
-         <property name="scaledContents">
-          <bool>false</bool>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
+    <layout class="QVBoxLayout" name="layout_velocimetro"/>
    </widget>
   </widget>
   <widget class="QTabWidget" name="tabWidget_bms">
@@ -4603,20 +4610,17 @@ font-weight: bold;</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="2">
-      <widget class="QLCDNumber" name="lcd_eng2_IA">
+     <item row="1" column="2">
+      <widget class="QLCDNumber" name="lcd_eng1_IA">
        <property name="digitCount">
         <number>3</number>
        </property>
       </widget>
      </item>
-     <item row="0" column="3">
-      <widget class="QLabel" name="label_35">
-       <property name="text">
-        <string>IB</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+     <item row="2" column="4">
+      <widget class="QLCDNumber" name="lcd_eng2_IC">
+       <property name="digitCount">
+        <number>3</number>
        </property>
       </widget>
      </item>
@@ -4637,6 +4641,23 @@ font-weight: bold;</string>
        </property>
       </widget>
      </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="label_35">
+       <property name="text">
+        <string>IB</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLCDNumber" name="lcd_eng2_IA">
+       <property name="digitCount">
+        <number>3</number>
+       </property>
+      </widget>
+     </item>
      <item row="0" column="2">
       <widget class="QLabel" name="label_33">
        <property name="text">
@@ -4647,15 +4668,15 @@ font-weight: bold;</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="3">
-      <widget class="QLCDNumber" name="lcd_eng2_IB">
+     <item row="1" column="4">
+      <widget class="QLCDNumber" name="lcd_eng1_IC">
        <property name="digitCount">
         <number>3</number>
        </property>
       </widget>
      </item>
-     <item row="1" column="4">
-      <widget class="QLCDNumber" name="lcd_eng1_IC">
+     <item row="2" column="3">
+      <widget class="QLCDNumber" name="lcd_eng2_IB">
        <property name="digitCount">
         <number>3</number>
        </property>
@@ -4668,15 +4689,22 @@ font-weight: bold;</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="4">
-      <widget class="QLCDNumber" name="lcd_eng2_IC">
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_37">
+       <property name="text">
+        <string>Temperaturas</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLCDNumber" name="lcd_eng1Temp">
        <property name="digitCount">
         <number>3</number>
        </property>
       </widget>
      </item>
-     <item row="1" column="2">
-      <widget class="QLCDNumber" name="lcd_eng1_IA">
+     <item row="3" column="3">
+      <widget class="QLCDNumber" name="lcd_eng2Temp">
        <property name="digitCount">
         <number>3</number>
        </property>

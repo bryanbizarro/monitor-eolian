@@ -49,7 +49,6 @@ private:
     double bms_temp[60];
     double bms_volt[30];
     double bms_amp[30];
-    double RPM[2] = {0,0};
 
     double amperaje1;
     double voltaje1;
